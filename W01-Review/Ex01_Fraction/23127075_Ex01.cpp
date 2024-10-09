@@ -1,4 +1,4 @@
-#include "header.h"
+#include "Fraction.h"
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
     fraction1.output();
     cout << endl;
     cout << "Is positive: " << fraction1.isPositive() << endl;
-    cout << "Is nositive: " << fraction1.isNegative() << endl;
+    cout << "Is negative: " << fraction1.isNegative() << endl;
     cout << "Is zero: " << fraction1.isZero() << "\n\n";
 
     fraction2.input();
@@ -25,11 +25,11 @@ int main()
     fraction2.output();
     cout << endl;
     cout << "Is positive: " << fraction2.isPositive() << endl;
-    cout << "Is nositive: " << fraction2.isNegative() << endl;
+    cout << "Is negative: " << fraction2.isNegative() << endl;
     cout << "Is zero: " << fraction2.isZero() << endl;
     cout << endl;
 
-    Fraction fraction3 = addTwoFractions(fraction1, fraction2);
+    Fraction fraction3 = fraction1.add(fraction2);
     fraction1.output();
     cout << " + ";
     fraction2.output();
@@ -37,7 +37,7 @@ int main()
     fraction3.output();
     cout << endl;
 
-    fraction3 = substractTwoFractions(fraction1, fraction2);
+    fraction3 = fraction1.subtract(fraction2);
     fraction1.output();
     cout << " - ";
     fraction2.output();
@@ -45,7 +45,7 @@ int main()
     fraction3.output();
     cout << endl;
 
-    fraction3 = multiplyTwoFractions(fraction1, fraction2);
+    fraction3 = fraction1.multiply(fraction2);
     fraction1.output();
     cout << " x ";
     fraction2.output();
@@ -53,7 +53,7 @@ int main()
     fraction3.output();
     cout << endl;
 
-    fraction3 = divideTwoFractions(fraction1, fraction2);
+    fraction3 = fraction1.divide(fraction2);
     if (fraction3.Denominator != 0)
     {
         fraction1.output();
