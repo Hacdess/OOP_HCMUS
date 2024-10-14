@@ -4,6 +4,7 @@ int main()
 {
     Point A;
     A.input();
+    cout << "Inputed point: ";
     A.output();
     cout << endl;
     cout << "Distance to Ox: " << A.distanceToOx() << endl;
@@ -11,6 +12,7 @@ int main()
 
     Point B;
     B.input();
+    cout << "Inputed point: ";
     B.output();
     cout << endl;
     cout << "Distance to Ox: " << B.distanceToOx() << endl;
@@ -20,16 +22,18 @@ int main()
     A.output();
     cout << " to ";
     B.output();
-    cout << " is " << distance(A, B) << "\n\n";
+    cout << " is " << A.distance(B) << "\n\n";
 
     Triangle triangle;
     triangle.input();
     triangle.output();
     cout << endl;
-    cout << "Is triangle: " << triangle.isValidTriangle() << endl;
+    cout << "Is triangle: " << (triangle.isValidTriangle() ? "Yes" : "No") << endl;
     cout << "Type: " << triangle.type() << endl;
     cout << "Perimeter: " << triangle.perimeter() << endl;
     cout << "Area: " << triangle.area() << endl;
     cout << "Center G = ";
     triangle.center().output();
+
+    return 0;
 }

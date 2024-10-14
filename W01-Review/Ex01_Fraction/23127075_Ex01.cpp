@@ -87,4 +87,6 @@ int main()
         cout << " < ";
         fraction2.output();
     }
+
+    return 0;
 }

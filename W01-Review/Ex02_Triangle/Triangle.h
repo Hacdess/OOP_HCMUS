@@ -10,11 +10,12 @@ struct Point
 
     void input();
     void output();
+    double distance(const Point& point);
     double distanceToOx();
     double distanceToOy();
 };
 
-double distance(const Point& A, const Point& B);
+
 
 struct Triangle
 {

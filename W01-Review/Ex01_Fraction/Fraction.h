@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-long long findGreatestCommonDivisor(const long long& a, const long long& b);
+int findGreatestCommonDivisor(const int& a, const int& b);
 
 struct Fraction
 {

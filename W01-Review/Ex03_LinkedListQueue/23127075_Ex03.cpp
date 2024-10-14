@@ -38,4 +38,6 @@ int main()
     queue.clear();
     queue.output();
     queue.status();
+
+    return 0;
 }

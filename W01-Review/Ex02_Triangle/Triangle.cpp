@@ -8,7 +8,12 @@ void Point::input()
 
 void Point::output()
 {
-    cout << '(' << x << ',' << y << ')';
+    cout << '(' << x << ", " << y << ')';
+}
+
+double Point::distance(const Point &point)
+{
+    return sqrt((x - point.x) * (x - point.x) + (y - point.y) * (y - point.y));
 }
 
 double Point::distanceToOx()
@@ -21,14 +26,9 @@ double Point::distanceToOy()
     return x;
 }
 
-double distance(const Point& A, const Point& B)
-{
-    return sqrt((A.x - B.x) * (A.x - B.x) + (A.y - B.y) * (A.y - B.y));
-}
-
 void Triangle::input()
 {
-    cout << "Input 3 points of triangle:\n";
+    cout << "Input 3 points of the triangle:\n";
     A.input();
     B.input();
     C.input();
@@ -46,11 +46,11 @@ void Triangle::output()
 
 bool Triangle::isValidTriangle()
 {
-    double a = distance(B, C);
-    double b = distance(C, A);
-    double c = distance(A, B);
+    double a = B.distance(C);
+    double b = C.distance(A);
+    double c = A.distance(B);
 
-    return (a + b > c) && (b + c > a) && (c + a > b);
+    return (a > 0) && (b > 0) && (c > 0) && (a + b > c) && (b + c > a) && (c + a > b);
 }
 
 string Triangle::type()
@@ -58,44 +58,67 @@ string Triangle::type()
     if (!isValidTriangle())
         return "Not Triangle";
 
-    double a = distance(B, C);
-    double b = distance(C, A);
-    double c = distance(A, B);
+    const double epsilon = 1e-9;
 
-    if (a == b && b == c)
+    double a = B.distance(C);
+    double b = C.distance(A);
+    double c = A.distance(B);
+
+    if (fabs(a - b) < epsilon && fabs(b - c) < epsilon)
         return "Equilateral Triangle";
 
-    if (a * a + b * b == c * c ||
-        b * b + c * c == a * a ||
-        c * c + a * a == b * b)
+    if (fabs(a * a + b * b - c * c) < epsilon || 
+        fabs(b * b + c * c - a * a) < epsilon || 
+        fabs(c * c + a * a - b * b) < epsilon)
+
     {
-        if (a == b || b == c || c == a)
-            return "Right Isosceles Triangle";
+        if (fabs(a - b) < epsilon || fabs(b - c) < epsilon || fabs(c - a) < epsilon)
+            return "Right-Angled Isosceles Triangle";
         return "Right-Angled Triangle";
     }
-
-    if (a == b || b == c || c == a)
-        return "Isosceles Triangle";
     
     if (a * a + b * b < c * c ||
         b * b + c * c < a * a ||
-        c * c + a * a < b * b)
+        c * c + a * a < b * b) 
+    {
+        if (fabs(a - b) < epsilon || fabs(b - c) < epsilon || fabs(c - a) < epsilon)
+            return "Obtuse-Angled Isosceles Triangle";
         return "Obtuse-Angled Triangle";
+    }
+
+    if (fabs(a - b) < epsilon || fabs(b - c) < epsilon || fabs(c - a) < epsilon)
+        return "Isosceles Triangle";
 
     return "Scalene Triangle";
 }
 
 double Triangle::perimeter()
 {
-    return distance(B, C) + distance(C, A) + distance(A, B);
+    if (!isValidTriangle())
+    {
+        cout << "Invalid Triangle!\n";
+        return 0;
+    }
+    return B.distance(C) + C.distance(A) + A.distance(B);
 }
 
+// Shoelace theorem
 double Triangle::area()
 {
-    return 0.5 * abs((B.x - A.x) * (C.y - A.y) - (C.x - A.x) * (B.y - A.y));
+    if (!isValidTriangle())
+    {
+        cout << "Invalid Triangle!\n";
+        return 0;
+    }
+    return 0.5 * fabs(A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y));
 }
 
 Point Triangle::center()
 {
+    if (!isValidTriangle())
+    {
+        cout << "Invalid Triangle!\n";
+        return {0,0};
+    }
     return {(A.x + B.x + C.x) / 3, (A.y + B.y + C.y) / 3};
 }
