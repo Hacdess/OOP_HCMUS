@@ -15,15 +15,13 @@ struct Point
     double distanceToOy();
 };
 
-
-
 struct Triangle
 {
     Point A, B, C;
 
     void input();
-    void output();
     bool isValidTriangle();
+    void output();
     string type();
     double perimeter();
     double area();

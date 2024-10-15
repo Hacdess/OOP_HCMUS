@@ -119,6 +119,7 @@ void LinkedListQueue::output()
 void LinkedListQueue::status()
 {
     cout << "Status:\n";
+    cout << "\tNumber of elements: " << num << "/" << capacity << endl;
     cout << "\tIs empty: " << (isEmpty() ? "Yes" : "No") << endl;
     cout << "\tIs full: " << (isFull() ? "Yes" : "No") << endl;
 }

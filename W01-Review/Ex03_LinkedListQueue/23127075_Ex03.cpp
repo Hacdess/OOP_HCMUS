@@ -13,8 +13,11 @@ int main()
     cout << endl;
 
     int n;
-    cout << "Input the number of elements to enqueue: ";
-    cin >> n;
+    do
+    {
+        cout << "Input the number (non-negative integer) of elements to enqueue: ";
+        cin >> n;
+    } while (n < 0);
     
     int value;
     cout << "Input " << n << " elements: ";
@@ -27,10 +30,15 @@ int main()
     queue.status();
     cout << endl;
 
-    cout << "Input the number of elements to dequeue: ";
-    cin >> n;
+    do
+    {
+        cout << "Input the number (non-negative integer) of elements to dequeue: ";
+        cin >> n;
+    } while (n < 0);
+
     for (int i = 0; i < n; i++)
         cout << queue.dequeue() << endl;
+        
     queue.output();
     queue.status();
     cout << endl;

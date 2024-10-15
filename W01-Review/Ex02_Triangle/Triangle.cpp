@@ -18,12 +18,12 @@ double Point::distance(const Point &point)
 
 double Point::distanceToOx()
 {
-    return y;
+    return fabs(y);
 }
 
 double Point::distanceToOy()
 {
-    return x;
+    return fabs(x);
 }
 
 void Triangle::input()
@@ -32,16 +32,6 @@ void Triangle::input()
     A.input();
     B.input();
     C.input();
-}
-
-void Triangle::output()
-{
-    cout << "Triangle: ";
-    A.output();
-    cout << " - ";
-    B.output();
-    cout << " - ";
-    C.output();
 }
 
 bool Triangle::isValidTriangle()
@@ -53,10 +43,26 @@ bool Triangle::isValidTriangle()
     return (a > 0) && (b > 0) && (c > 0) && (a + b > c) && (b + c > a) && (c + a > b);
 }
 
+void Triangle::output()
+{
+    if (!isValidTriangle())
+    {
+        cout << "Invalid triangle!\n";
+        return;
+    }
+
+    cout << "Triangle: ";
+    A.output();
+    cout << " - ";
+    B.output();
+    cout << " - ";
+    C.output();
+}
+
 string Triangle::type()
 {
     if (!isValidTriangle())
-        return "Not Triangle";
+        return "Invalid Triangle";
 
     const double epsilon = 1e-9;
 

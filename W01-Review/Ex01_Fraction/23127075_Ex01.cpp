@@ -7,8 +7,9 @@ int main()
     fraction1.input();
     cout << "Fraction 1: ";
     fraction1.output();
-    fraction1.reduce();
     cout << endl;
+
+    fraction1.reduce();
     cout << "Fraction 1 after being reduced: ";
     fraction1.output();
     cout << endl;
@@ -19,8 +20,9 @@ int main()
     fraction2.input();
     cout << "Fraction 2: ";
     fraction2.output();
-    fraction2.reduce();
     cout << endl;
+
+    fraction2.reduce();
     cout << "Fraction 2 after being reduced: ";
     fraction2.output();
     cout << endl;

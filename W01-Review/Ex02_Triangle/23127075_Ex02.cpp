@@ -4,7 +4,7 @@ int main()
 {
     Point A;
     A.input();
-    cout << "Inputed point: ";
+    cout << "Inputted point: ";
     A.output();
     cout << endl;
     cout << "Distance to Ox: " << A.distanceToOx() << endl;
@@ -12,7 +12,7 @@ int main()
 
     Point B;
     B.input();
-    cout << "Inputed point: ";
+    cout << "Inputted point: ";
     B.output();
     cout << endl;
     cout << "Distance to Ox: " << B.distanceToOx() << endl;
