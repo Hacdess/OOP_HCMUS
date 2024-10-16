@@ -1,11 +1,5 @@
 #include "LinkedListQueue.h"
 
-Node::Node(const int& data)
-{
-    key = data;
-    next = nullptr;
-}
-
 void LinkedListQueue::init(const int& inputCapacity)
 {
     if (inputCapacity <= 0)
