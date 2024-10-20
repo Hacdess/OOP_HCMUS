@@ -6,10 +6,6 @@ int findGreatestCommonDivisor(const int& a, const int& b) {
     return findGreatestCommonDivisor(b, a % b);
 }
 
-int Fraction::getDenominator() {
-    return denominator;
-}
-
 void Fraction::input() {
     cout << "Input the fraction's numerator and denominator (separated by space): ";
     cin >> numerator >> denominator;
@@ -20,7 +16,7 @@ void Fraction::input() {
     }
 }
 
-void Fraction::output() {
+void Fraction::output() const {
     try {
         if (denominator != 0) {
             if (numerator % denominator == 0)
@@ -48,7 +44,7 @@ void Fraction::reduce() {
     }
 }
 
-Fraction Fraction::add(const Fraction& fraction) {
+Fraction Fraction::add(const Fraction& fraction) const {
     Fraction answer;
     answer.numerator = numerator * fraction.denominator + denominator * fraction.numerator;
     answer.denominator = denominator * fraction.denominator;
@@ -56,7 +52,7 @@ Fraction Fraction::add(const Fraction& fraction) {
     return answer;
 }
 
-Fraction Fraction::subtract(const Fraction& fraction) {
+Fraction Fraction::subtract(const Fraction& fraction) const {
     Fraction answer;
     answer.numerator = numerator * fraction.denominator - denominator * fraction.numerator;
     answer.denominator = denominator * fraction.denominator;
@@ -64,7 +60,7 @@ Fraction Fraction::subtract(const Fraction& fraction) {
     return answer;
 }
 
-Fraction Fraction::multiply(const Fraction& fraction) {
+Fraction Fraction::multiply(const Fraction& fraction) const {
     Fraction answer;
     answer.numerator = numerator * fraction.numerator;
     answer.denominator = denominator * fraction.denominator;
@@ -72,7 +68,7 @@ Fraction Fraction::multiply(const Fraction& fraction) {
     return answer;
 }
 
-Fraction Fraction::divide(const Fraction& fraction) {
+Fraction Fraction::divide(const Fraction& fraction) const {
     if (fraction.numerator == 0)
         throw invalid_argument("Error: Can't divide by a fraction with a numerator of 0!");
 
@@ -89,21 +85,21 @@ Fraction Fraction::divide(const Fraction& fraction) {
     return answer;
 }
 
-short Fraction::compare(const Fraction& fraction) {
+short Fraction::compare(const Fraction& fraction) const {
     int delta = numerator * fraction.denominator - denominator * fraction.numerator;
     if (delta < 0) return -1;
     if (delta > 0) return 1;
     return delta;
 }
 
-bool Fraction::isPositive() {
+bool Fraction::isPositive() const {
     return (numerator * denominator > 0);
 }
 
-bool Fraction::isNegative() {
+bool Fraction::isNegative() const {
     return (numerator * denominator < 0);
 }
 
-bool Fraction::isZero() {
+bool Fraction::isZero() const {
     return (denominator != 0 && numerator == 0);
 }

@@ -11,19 +11,17 @@ class Fraction {
         int numerator, denominator;
     
     public:
-        int getDenominator();
-
         void input();
-        void output(); 
+        void output() const;
         void reduce(); 
-        Fraction add(const Fraction& fraction);
-        Fraction subtract(const Fraction& fraction);
-        Fraction multiply(const Fraction& fraction);
-        Fraction divide(const Fraction& fraction);
-        short compare(const Fraction& fraction);
-        bool isPositive();
-        bool isNegative();
-        bool isZero();
+        Fraction add(const Fraction& fraction) const;
+        Fraction subtract(const Fraction& fraction) const;
+        Fraction multiply(const Fraction& fraction) const;
+        Fraction divide(const Fraction& fraction) const;
+        short compare(const Fraction& fraction) const;
+        bool isPositive() const;
+        bool isNegative() const;
+        bool isZero() const;
 };
 
 #endif
