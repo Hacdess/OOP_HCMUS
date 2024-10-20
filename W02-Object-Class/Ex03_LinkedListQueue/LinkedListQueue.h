@@ -1,32 +1,26 @@
-#include <iostream>
-#include <cmath>
-#include <string>
+#ifndef _LINKED_LIST_QUEUE_H_
+#define _LINKED_LIST_QUEUE_H_
 
-using namespace std;
+#include "Node.h"
 
-struct Node
-{
-    int key;
-    Node* next;
+struct LinkedListQueue {
+    private:
+        Node *head; 
+        Node *tail;
+        int capacity;
+        int num;
 
-    Node(const int& data);
+    public:
+        void init(const int& inputCapacity); 
+        void enqueue(int x);
+        int dequeue();
+        int peek();
+        bool isEmpty();
+        bool isFull();
+        void clear();
+
+        void output();
+        void status();
 };
 
-struct LinkedListQueue
-{
-    Node *head; 
-    Node *tail;
-    int capacity;
-    int num;
-
-    void init(const int& inputCapacity); 
-    void enqueue(int x);
-    int dequeue();
-    int peek();
-    bool isEmpty();
-    bool isFull();
-    void clear();
-
-    void output();
-    void status();
-};
+#endif
