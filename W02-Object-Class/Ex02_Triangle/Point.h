@@ -7,6 +7,8 @@
 
 using namespace std;
 
+const double epsilon = 1e-9;
+
 class Point {
     private:
         double x, y;
@@ -15,14 +17,14 @@ class Point {
         Point();
         Point(const double& x, const double& y);
 
-        double getX();
-        double getY();
+        double getX() const;
+        double getY() const;
 
         void input();
-        void output();
-        double distance(const Point& point);
-        double distanceToOx();
-        double distanceToOy();
+        void output() const;
+        double distance(const Point& point) const;
+        double distanceToOx() const;
+        double distanceToOy() const;
 };
 
 #endif

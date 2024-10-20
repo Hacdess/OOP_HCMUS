@@ -1,23 +1,19 @@
 #include "LinkedListQueue.h"
 
-void LinkedListQueue::init(const int& inputCapacity)
-{
-    if (inputCapacity <= 0)
-    {
+void LinkedListQueue::init(const int &capacity) {
+    if (capacity <= 0) {
         cout << "Capacity must be greater than zero!\n";
-        capacity = 0;
-    }
-    else
-        capacity = inputCapacity;
+        this->capacity = 0;
+    } else
+        this->capacity = capacity;
+
     num = 0;
     head = tail = nullptr;
 }
 
-void LinkedListQueue::enqueue(int x)
-{
-    if (num == capacity)
-    {
-        cout << "Can't enqueue because the queue is full!\n";
+void LinkedListQueue::enqueue(int x) {
+    if (num == capacity) {
+        cout << "Error: Can't enqueue " << x << " because the queue is full!\n";
         return;
     }
 
@@ -28,24 +24,19 @@ void LinkedListQueue::enqueue(int x)
     if (!tail)
         head = tail = node;
 
-    else
-    {
-        tail->next = node;
-        tail= tail->next;
+    else {
+        tail->setNext(node);
+        tail = node;
     }
 }
 
-int LinkedListQueue::dequeue()
-{
+int LinkedListQueue::dequeue() {
     if (!head)
-    {
-        cout << "Can't dequeue because the queue is empty!\n";
-        return INT_MIN;
-    }
+        throw invalid_argument("Error: Can't dequeue because the queue is empty!");
 
     Node* node = head;
-    int result = node->key;
-    head = head->next;
+    int result = node->getKey();
+    head = head->getNext();
     delete node;
 
     num--;
@@ -56,62 +47,52 @@ int LinkedListQueue::dequeue()
     return result;
 }
 
-int LinkedListQueue::peek()
-{
-    if (head)
-        return head->key;
-    
-    cout << "The queue is empty!\n";
-    return INT_MIN;
+int LinkedListQueue::peek() const {
+    if (!head)
+        throw invalid_argument("Error: Can't get peek because the queue is empty!");
+
+    return head->getKey();    
 }
 
-bool LinkedListQueue::isEmpty()
-{
+bool LinkedListQueue::isEmpty() const {
     return num == 0;
 }
 
-bool LinkedListQueue::isFull()
-{
+bool LinkedListQueue::isFull() const {
     return num == capacity;
 }
 
-void LinkedListQueue::clear()
-{
+void LinkedListQueue::clear() {
     Node* cur;
 
-    while (head)
-    {
+    while (head) {
         cur = head;
-        head = head->next;
+        head = head->getNext();
         delete cur;
-        cur = nullptr;
     }
 
     num = 0;
     tail = nullptr;
 }
 
-void LinkedListQueue::output()
-{
+void LinkedListQueue::output() const {
     cout << "Queue: ";
 
     if (!head)
         cout << "Empty";
-    else
-    {
+    else {
         Node* cur = head;
         while (cur)
         {
-            cout << cur->key << ' ';
-            cur = cur->next;
+            cout << cur->getKey() << ' ';
+            cur = cur->getNext();
         }
     }
     
     cout << endl;
 }
 
-void LinkedListQueue::status()
-{
+void LinkedListQueue::status() const {
     cout << "Status:\n";
     cout << "\tNumber of elements: " << num << "/" << capacity << endl;
     cout << "\tIs empty: " << (isEmpty() ? "Yes" : "No") << endl;

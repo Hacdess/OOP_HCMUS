@@ -7,37 +7,30 @@ void Triangle::input() {
     C.input();
 }
 
-bool Triangle::isValidTriangle() {
+bool Triangle::isValidTriangle() const {
     double a = B.distance(C);
     double b = C.distance(A);
     double c = A.distance(B);
 
-    return (a > 0) && (b > 0) && (c > 0) && (a + b > c) && (b + c > a) && (c + a > b);
+    return (a > -epsilon) && (b > -epsilon) && (c > -epsilon) && (a + b > c + epsilon) && (b + c > a + epsilon) && (c + a > b + epsilon);
 }
 
-void Triangle::output() {
-    try {
-        if (isValidTriangle()) {
-            cout << "Triangle: ";
-            A.output();
-            cout << " - ";
-            B.output();
-            cout << " - ";
-            C.output();
-        }
-        else
-            throw invalid_argument("Error: Invalid triangle!");
+void Triangle::output() const {
+    if (isValidTriangle()) {
+        cout << "Triangle: ";
+        A.output();
+        cout << " - ";
+        B.output();
+        cout << " - ";
+        C.output();
     }
-    catch(const invalid_argument& e) {
-        cout << e.what() << '\n';
-    }
+    else
+        cout << "Error: Invalid triangle!\n";
 }
 
-string Triangle::type() {
+string Triangle::type() const {
     if (!isValidTriangle())
         return "Invalid Triangle";
-
-    const double epsilon = 1e-9;
 
     double a = B.distance(C);
     double b = C.distance(A);
@@ -68,24 +61,20 @@ string Triangle::type() {
     return "Scalene Triangle";
 }
 
-double Triangle::perimeter() {
-    if (!isValidTriangle()) {
+double Triangle::perimeter() const {
+    if (!isValidTriangle())
         throw invalid_argument("Error: Invalid Triangle!");
-        return 0;
-    }
     return B.distance(C) + C.distance(A) + A.distance(B);
 }
 
 // Shoelace theorem
-double Triangle::area() {
-    if (!isValidTriangle()) {
+double Triangle::area() const {
+    if (!isValidTriangle())
         throw invalid_argument ("Error: Invalid Triangle!");
-        return 0;
-    }
     return 0.5 * fabs(A.getX() * (B.getY() - C.getY()) + B.getX() * (C.getY() - A.getY()) + C.getX() * (A.getY() - B.getY()));
 }
 
-Point Triangle::center() {
+Point Triangle::center() const {
     if (!isValidTriangle())
         throw invalid_argument("Error: Invalid Triangle!");
     return {(A.getX() + B.getX() + C.getX()) / 3, (A.getY() + B.getY() + C.getY()) / 3};

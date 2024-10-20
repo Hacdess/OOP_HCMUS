@@ -11,16 +11,15 @@ struct LinkedListQueue {
         int num;
 
     public:
-        void init(const int& inputCapacity); 
+        void init(const int& capacity); 
         void enqueue(int x);
         int dequeue();
-        int peek();
-        bool isEmpty();
-        bool isFull();
+        int peek() const;
+        bool isEmpty() const;
+        bool isFull() const;
         void clear();
-
-        void output();
-        void status();
+        void output() const;
+        void status() const;
 };
 
 #endif

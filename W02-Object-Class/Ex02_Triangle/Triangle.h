@@ -9,12 +9,12 @@ struct Triangle {
 
     public:
         void input();
-        bool isValidTriangle();
-        void output();
-        string type();
-        double perimeter();
-        double area();
-        Point center();
+        bool isValidTriangle() const;
+        void output() const;
+        string type() const;
+        double perimeter() const;
+        double area() const;
+        Point center() const;
 };
 
 #endif

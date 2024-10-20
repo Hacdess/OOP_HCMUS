@@ -14,6 +14,11 @@ class Node {
 
     public:
         Node(const int& data);
+
+        void setNext(Node* node);
+
+        int getKey() const;
+        Node* getNext() const;
 };
 
 #endif

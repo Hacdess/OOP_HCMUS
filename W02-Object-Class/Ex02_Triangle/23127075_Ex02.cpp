@@ -1,7 +1,6 @@
 #include "Triangle.h"
 
-int main()
-{
+int main() {
     Point A;
     A.input();
     cout << "Inputted point: ";
@@ -46,12 +45,16 @@ int main()
     }
 
     try {
-        cout << "Center G = ";
+        cout << "Center: ";
         triangle.center().output();
     }
     catch(const invalid_argument& e) {
         cout << e.what() << '\n';
     }
+
+    // I printed the perimeter, the area and the center of the triangle even it is an invalid triangle
+    // because I want to show that each of these functions can detect the error (invalid triangle) 
+    // and throw that error back.
     
     return 0;
 }

@@ -9,12 +9,11 @@ Point::Point(const double &x, const double &y) {
     this->y = y;
 }
 
-double Point::getX()
-{
+double Point::getX() const {
     return x;
 }
 
-double Point::getY() {
+double Point::getY() const {
     return y;
 }
 
@@ -23,18 +22,18 @@ void Point::input() {
     cin >> x >> y;
 }
 
-void Point::output() {
+void Point::output() const {
     cout << '(' << x << ", " << y << ')';
 }
 
-double Point::distance(const Point &point) {
+double Point::distance(const Point &point) const {
     return sqrt((x - point.x) * (x - point.x) + (y - point.y) * (y - point.y));
 }
 
-double Point::distanceToOx() {
+double Point::distanceToOx() const {
     return fabs(y);
 }
 
-double Point::distanceToOy() {
+double Point::distanceToOy() const {
     return fabs(x);
 }
