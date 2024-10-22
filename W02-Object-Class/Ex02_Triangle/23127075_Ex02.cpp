@@ -27,34 +27,16 @@ int main() {
     triangle.input();    
     triangle.output();
     cout << endl;
-    cout << "Is triangle: " << (triangle.isValidTriangle() ? "Yes" : "No") << endl;
-    cout << "Type: " << triangle.type() << endl;
 
-    try {
+    if (triangle.isValidTriangle()) {
+        cout << "Is triangle: " << "Yes" << endl;
+        cout << "Type: " << triangle.type() << endl;
         cout << "Perimeter: " << triangle.perimeter() << endl;
-    }
-    catch(const invalid_argument& e) {
-        cout << e.what() << '\n';
-    }
-    
-    try {
         cout << "Area: " << triangle.area() << endl;
-    }
-    catch(const invalid_argument& e) {
-        cout << e.what() << '\n';
-    }
-
-    try {
         cout << "Center: ";
         triangle.center().output();
-    }
-    catch(const invalid_argument& e) {
-        cout << e.what() << '\n';
-    }
-
-    // I printed the perimeter, the area and the center of the triangle even it is an invalid triangle
-    // because I want to show that each of these functions can detect the error (invalid triangle) 
-    // and throw that error back.
+    } else
+        cout << "Is triangle: " << "No" << endl;
     
     return 0;
 }

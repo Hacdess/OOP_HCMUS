@@ -62,20 +62,14 @@ string Triangle::type() const {
 }
 
 double Triangle::perimeter() const {
-    if (!isValidTriangle())
-        throw invalid_argument("Error: Invalid Triangle!");
     return B.distance(C) + C.distance(A) + A.distance(B);
 }
 
 // Shoelace theorem
 double Triangle::area() const {
-    if (!isValidTriangle())
-        throw invalid_argument ("Error: Invalid Triangle!");
     return 0.5 * fabs(A.getX() * (B.getY() - C.getY()) + B.getX() * (C.getY() - A.getY()) + C.getX() * (A.getY() - B.getY()));
 }
 
 Point Triangle::center() const {
-    if (!isValidTriangle())
-        throw invalid_argument("Error: Invalid Triangle!");
     return {(A.getX() + B.getX() + C.getX()) / 3, (A.getY() + B.getY() + C.getY()) / 3};
 }
