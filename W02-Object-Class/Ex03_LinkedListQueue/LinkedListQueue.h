@@ -3,7 +3,7 @@
 
 #include "Node.h"
 
-struct LinkedListQueue {
+class LinkedListQueue {
     private:
         Node *head; 
         Node *tail;

@@ -8,7 +8,7 @@ Point2D::Point2D() {
 Point2D::Point2D(int x) {
     this->x = x;
     this->y = 0;
-    cout << "Point2D::Default constructor" << endl;
+    cout << "Point2D::Constructor with 1 argument" << endl;
 }
 
 Point2D::Point2D(int x, int y) {
@@ -37,7 +37,7 @@ Point2D::~Point2D() {
 }
 
 string Point2D::toString() {
-    return to_string(x) + "," + to_string(y);
+    return '(' + to_string(x) + "," + to_string(y) + ')';
 }
 
 Point2D* Point2D::clone() {

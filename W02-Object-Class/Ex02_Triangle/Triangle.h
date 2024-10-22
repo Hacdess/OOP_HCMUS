@@ -3,7 +3,7 @@
 
 #include "Point.h"
 
-struct Triangle {
+class Triangle {
     private:
         Point A, B, C;
 

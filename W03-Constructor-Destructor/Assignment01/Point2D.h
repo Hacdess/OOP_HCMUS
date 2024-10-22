@@ -17,7 +17,7 @@ class Point2D {
         Point2D(const Point2D &other);
         Point2D(string s);
         ~Point2D();
-
+        
         string toString();
         Point2D* clone();
 };
