@@ -36,6 +36,22 @@ Point2D::~Point2D() {
     cout << "Point2D::Destructor" << endl;
 }
 
+int Point2D::getX() {
+    return x;
+}
+
+int Point2D::getY() {
+    return y;
+}
+
+void Point2D::setX(int x) {
+    this->x = x;
+}
+
+void Point2D::setY(int y) {
+    this->y = y;
+}
+
 string Point2D::toString() {
     return '(' + to_string(x) + "," + to_string(y) + ')';
 }

@@ -1,7 +1,7 @@
 #ifndef _TRIANGLE_H_
 #define _TRIANGLE_H_
 
-#include "..\Assignment01\Point2D.h"
+#include "../Assignment01/Point2D.h"
 
 class Triangle {
     private:
