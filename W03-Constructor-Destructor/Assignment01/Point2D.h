@@ -18,8 +18,6 @@ class Point2D {
         Point2D(string s);
         ~Point2D();
 
-        int getX();
-        int getY();
         void setX(int x);
         void setY(int y);
 
