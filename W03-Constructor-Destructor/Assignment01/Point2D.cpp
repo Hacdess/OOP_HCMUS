@@ -5,14 +5,8 @@ Point2D::Point2D() {
     x = y = 0;
 }
 
-Point2D::Point2D(int x) {
-    cout << "Point2D::Constructor with 1 argument" << endl;
-    this->x = x;
-    this->y = 0;
-}
-
 Point2D::Point2D(int x, int y) {
-    cout << "Point2D::Constructor with 2 arguments" << endl;
+    cout << "Point2D::Parameterized constructor" << endl;
     this->x = x;
     this->y = y;
 }
@@ -23,8 +17,15 @@ Point2D::Point2D(const Point2D &other) {
     y = other.y;
 }
 
+Point2D::Point2D(Point2D &&other) noexcept {
+    cout << "Point2D::Move constructor" << endl;
+    this->x = other.x;
+    this->y = other.y;
+    other.x = other.y = 0;
+}
+
 Point2D::Point2D(string s) {
-    cout << "Point2D::Constructor from string" << endl;
+    cout << "Point2D::String-extracting constructor" << endl;
     stringstream ss(s);
     ss >> x;
     char comma;

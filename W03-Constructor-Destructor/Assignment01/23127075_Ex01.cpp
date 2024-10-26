@@ -1,28 +1,29 @@
 #include "Point2D.h"
 
 int main() {
-    // Point2D::Default constructor
+    // Default constructor
     Point2D A;
     cout << "A = " << A.toString() << "\n\n";
 
-    // Point2D::Constructor with 1 argument
-    Point2D B(3);
+    // Parameterized constructor
+    Point2D B(4, 5);
     cout << "B = " << B.toString() << "\n\n";
 
-    // Point2D::Constructor with 2 arguments
-    Point2D C(4, 5);
+    // Copy constructor
+    Point2D C(B);
     cout << "C = " << C.toString() << "\n\n";
 
-    // Point2D::Copy constructor
-    Point2D D(C);
-    cout << "D = " << D.toString() << "\n\n";
-    
-    // Point2D::Constructor from string
+    // Move constructor
+    Point2D D = move(C);
+    cout << "D = " << D.toString() << "\n";
+    cout << "C = " << C.toString() << "\n\n";
+
+    // String-extracting constructor
     string s = "15,-2";
     Point2D E(s);
     cout << "E = " << E.toString() << "\n\n";
 
-    // Point2D::clone
+    // Clone
     Point2D* F = E.clone();
     cout << "F = " << F->toString() << "\n\n";
     delete F;

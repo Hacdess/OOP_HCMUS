@@ -11,11 +11,22 @@ class Point2D {
     private:
         int x, y;
     public:
+        // Default constructor
         Point2D();
-        Point2D(int x);
+
+        // Parameterized constructor
         Point2D(int x, int y);
+
+        // Copy constructor
         Point2D(const Point2D &other);
+
+        // Move constructor
+        Point2D(Point2D &&other) noexcept;
+
+        // String-extracting constructor
         Point2D(string s);
+
+        // Destructor
         ~Point2D();
 
         void setX(int x);
