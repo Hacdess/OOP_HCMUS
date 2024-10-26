@@ -45,6 +45,14 @@ void Point2D::setY(int y) {
     this->y = y;
 }
 
+int Point2D::getX() {
+    return x;
+}
+
+int Point2D::getY() {
+    return y;
+}
+
 string Point2D::toString() {
     return '(' + to_string(x) + "," + to_string(y) + ')';
 }

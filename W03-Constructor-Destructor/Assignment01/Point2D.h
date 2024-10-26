@@ -32,6 +32,9 @@ class Point2D {
         void setX(int x);
         void setY(int y);
 
+        int getX();
+        int getY();
+
         string toString();
         Point2D* clone();
 };

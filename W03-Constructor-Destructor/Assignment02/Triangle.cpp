@@ -2,30 +2,55 @@
 
 Triangle::Triangle() {
     cout << "Triangle::Default constructor" << endl;
-    A;
-    B;
-    C;
-}
-
-Triangle::Triangle(Point2D A) {
-    cout << "Triangle::Constructor with 1 argument" << endl;
-    this->A = A;
-    B;
-    C;
 }
 
 Triangle::Triangle(Point2D A, Point2D B, Point2D C) {
-    cout << "Triangle::Constructor with 3 arguments" << endl;
-    this->A = A;
-    this->B = B;
-    this->C = C;
+    cout << "Triangle::Parameterized constructor" << endl;
+
+    this->A.setX(A.getX());
+    this->A.setY(A.getY());
+
+    this->B.setX(B.getX());
+    this->B.setY(B.getY());
+
+    this->C.setX(C.getX());
+    this->C.setY(C.getY());
 }
 
 Triangle::Triangle(const Triangle &other) {
     cout << "Triangle::Copy constructor" << endl;
-    this->A = other.A;
-    this->B = other.B;
-    this->C = other.C;
+
+    this->A.setX(A.getX());
+    this->A.setY(A.getY());
+
+    this->B.setX(B.getX());
+    this->B.setY(B.getY());
+
+    this->C.setX(C.getX());
+    this->C.setY(C.getY());
+}
+
+Triangle::Triangle(Triangle &&other) noexcept {
+    cout << "Triangle::Move constructor" << endl;
+
+    this->A.setX(A.getX());
+    this->A.setY(A.getY());
+
+    this->B.setX(B.getX());
+    this->B.setY(B.getY());
+
+    this->C.setX(C.getX());
+    this->C.setY(C.getY());
+
+
+    A.setX(0);
+    A.setY(0);
+
+    B.setX(0);
+    B.setY(0);
+
+    C.setX(0);
+    C.setY(0);
 }
 
 Triangle::Triangle(string s) {

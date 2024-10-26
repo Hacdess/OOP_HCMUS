@@ -1,30 +1,30 @@
 #include "Triangle.h"
 
 int main() {
-    // Triangle::Default constructor
+    // Default constructor
     Triangle triangle1;
-    cout << triangle1.toString() << "\n\n";
+    cout << "Triangle 1: " << triangle1.toString() << "\n\n";
 
-    // Triangle::Constructor with 1 argument
-    Point2D point1(2, 3);
-    Triangle triangle2(point1);
-    cout << triangle2.toString() << "\n\n";
-
-    // Triangle::Constructor with 3 arguments
+    // Triangle::Parameterized constructor
     Point2D A(1,0), B(-1,0), C(0,1);
-    Triangle triangle3(A, B, C);
-    cout << triangle3.toString() << "\n\n";
+    Triangle triangle2(A, B, C);
+    cout << "Triangle 2: " << triangle2.toString() << "\n\n";
 
     // Triangle::Copy constructor
-    Triangle triangle4(triangle3);
-    cout << triangle4.toString() << "\n\n";
+    Triangle triangle3(triangle2);
+    cout << "Triangle 3: " << triangle3.toString() << "\n\n";
 
-    // Triangle::Constructor from string
+    // Move constructor
+    Triangle triangle4 = move(triangle3);
+    cout << "Triangle 4: " << triangle4.toString() << "\n";
+    cout << "Triangle 3: " << triangle3.toString() << "\n\n";
+
+    // String-extracting constructor
     string s = "(2,3)-(4,3)-(3,4)";
     Triangle triangle5(s);
-    cout << triangle5.toString() << "\n\n";
+    cout << "Triangle 5: " << triangle3.toString() << "\n\n";
 
-    // Triangle::clone
+    // Clone
     Triangle* triangle6 = triangle5.clone();
     cout << triangle6->toString() << "\n\n";
     delete triangle6;
