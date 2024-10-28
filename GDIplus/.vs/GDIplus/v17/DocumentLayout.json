@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\",
+  "WorkspaceRootPath": "D:\\OOP_HCMUS\\GDIplus\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EC4144D-8444-4B9D-9172-3A1C700D7978}|LearnGDIplus\\LearnGDIplus.vcxproj|D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIplus.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{6EC4144D-8444-4B9D-9172-3A1C700D7978}|LearnGDIplus\\LearnGDIplus.vcxproj|D:\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIplus.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6EC4144D-8444-4B9D-9172-3A1C700D7978}|LearnGDIplus\\LearnGDIplus.vcxproj|solutionrelative:LearnGDIplus\\LearnGDIplus.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,17 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LearnGDIplus.cpp",
-              "DocumentMoniker": "D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIplus.cpp",
+              "DocumentMoniker": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIplus.cpp",
               "RelativeDocumentMoniker": "LearnGDIplus\\LearnGDIplus.cpp",
-              "ToolTip": "D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIplus.cpp",
+              "ToolTip": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIplus.cpp",
               "RelativeToolTip": "LearnGDIplus\\LearnGDIplus.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAABAAAA",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-25T03:36:51.818Z",
               "EditorCaption": ""
