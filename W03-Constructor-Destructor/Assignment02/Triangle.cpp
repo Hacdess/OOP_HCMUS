@@ -54,7 +54,7 @@ Triangle::Triangle(Triangle &&other) noexcept {
 }
 
 Triangle::Triangle(string s) {
-    cout << "Triangle::Constructor from string" << endl;
+    cout << "Triangle::String-extracting constructor" << endl;
     stringstream ss(s);
     int num;
     char c;
