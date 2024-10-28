@@ -8,7 +8,7 @@
 
 using namespace std;
 
-enum STATE {MENU, PURCHASING, SALES, EXIT};
+enum STATE {MENU, PURCHASING, SALES, CHECK, EXIT};
 
 class Theater {
     private:
@@ -31,12 +31,11 @@ class Theater {
         STATE getState();
 
         void showSeats();
-        void showPrices();
-
         void showMenu();
         bool isValid(int row, int col);
         void purchase();
         void viewSales();
+        void check();
 };
 
 #endif

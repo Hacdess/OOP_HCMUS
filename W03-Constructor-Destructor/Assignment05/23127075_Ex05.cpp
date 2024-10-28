@@ -21,12 +21,13 @@ int main() {
             case SALES:
                 theater.viewSales();
                 break;
+            case CHECK:
+                theater.check();
+                break;
             default:
                 break;
         }
     }
-    
-    cout << "\nProgram closing...\n";
 
     return 0;
 }

@@ -14,6 +14,7 @@ Theater::Theater() {
 }
 
 Theater::~Theater() {
+    cout << "Closing program...\n";
 }
 
 bool Theater::getPrices(string filename) {
@@ -39,9 +40,8 @@ STATE Theater::getState() {
     return state;
 }
 
-void Theater::showSeats()
-{
-    cout << "   \t\tSeats\n";
+void Theater::showSeats() {
+    cout << "\t\tSeats\n";
     cout << "\t123456789012345678901234567890\n";
     for (int i = 0; i < 15; ++i) {
         cout << "Row " << i + 1 << '\t';
@@ -51,31 +51,24 @@ void Theater::showSeats()
     }
 }
 
-void Theater::showPrices() {
-    for (int i = 0; i < 15; ++i) {
-        cout << "Row " << i + 1 << '\t';
-        for (int j = 0; j < 30; ++j)
-            cout << prices[i][j] << ' ';
-        cout << endl;
-    }
-}
-
 void Theater::showMenu() {
     cout << "\n========= MENU =========\n";
     cout << "Please select an action:\n";
     cout << "1. Buying tickets.\n";
     cout << "2. View ticket sales.\n";
-    cout << "3. Exit.\n";
+    cout << "3. Check sold, available seats in each row and available seats in the entire auditorium.\n";
+    cout << "4. Exit.\n";
     cout << "Your selection: ";
     int select;
     cin >> select;
     
-    while (select != 1 && select != 2 && select != 3) {
+    while (select != 1 && select != 2 && select != 3 && select != 4) {
         cout << "\nSelction must be 1, 2 or 3! Please input again:\n";
         cout << "1. Buying tickets.\n";
         cout << "2. View ticket sales.\n";
-        cout << "3. Exit.\n";
-        cout << "Your selection: ";
+        cout << "3. Check sold, available seats in each row and available seats in the entire auditorium.\n";
+        cout << "4. Exit.\n";
+         cout << "Your selection: ";
         cin >> select;
     }
 
@@ -87,6 +80,9 @@ void Theater::showMenu() {
             state = SALES;
             break;
         case 3:
+            state = CHECK;
+            break;
+        case 4:
             state = EXIT;
             break;
         default:
@@ -129,18 +125,38 @@ void Theater::purchase() {
 void Theater::viewSales() {
     char c;
 
-    while (true) {
-        cout << "\n========== Sales ==========\n";
-        cout << "Number of sold tickets: " << numSoldTickets << endl;
-        cout << "Total revenue: " << totalRevenue << endl;
+    cout << "\n========== Sales ==========\n";
+    cout << "Number of sold tickets: " << numSoldTickets << endl;
+    cout << "Total revenue: " << totalRevenue << endl;
+    
+    do {
+        cout << "Press 'e' to get back to menu: ";
+        cin >> c;
+    } while (c != 'e');
         
-        do {
-            cout << "Press 'e' to get back to menu: ";
-            cin >> c;
-        } while (c != 'e');
-        
-        break;
+    state = MENU;
+}
+
+void Theater::check() {
+    char c;
+    cout << "\n========== SEAT STATUS ==========\n";
+    short count = 0;
+
+    for (int i = 0; i < 15; ++i) {
+        count  = 0;
+        cout << "Row " << i + 1 << ":\t Number of sold seats: ";
+        for (int j = 0; j < 30; ++j)
+            if (seats[i][j] == '*')
+                count ++;
+        cout << count << "\tNumber of available seats:" << 30 - count << endl;
     }
+
+    cout << "Number of available seats in the entire auditorium: " << 450 - numSoldTickets << endl;
+
+    do {
+        cout << "Press 'e' to get back to menu: ";
+        cin >> c;
+    } while (c != 'e');
 
     state = MENU;
 }
