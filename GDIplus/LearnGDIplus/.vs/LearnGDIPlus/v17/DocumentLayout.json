@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\",
+  "WorkspaceRootPath": "D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\LearnGDIPlus.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIPlus.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|solutionrelative:LearnGDIPlus.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\LearnGDIPlus.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIPlus.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|solutionrelative:LearnGDIPlus.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|solutionrelative:framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|solutionrelative:targetver.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F30B90DF-3424-41D0-BA71-05562E69D5EA}|LearnGDIPlus.vcxproj|solutionrelative:Resource.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LearnGDIPlus.h",
-              "DocumentMoniker": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\LearnGDIPlus.h",
+              "DocumentMoniker": "D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIPlus.h",
               "RelativeDocumentMoniker": "LearnGDIPlus.h",
-              "ToolTip": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\LearnGDIPlus.h",
+              "ToolTip": "D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIPlus.h",
               "RelativeToolTip": "LearnGDIPlus.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-28T03:33:00.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "targetver.h",
-              "DocumentMoniker": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\targetver.h",
-              "RelativeDocumentMoniker": "targetver.h",
-              "ToolTip": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\targetver.h",
-              "RelativeToolTip": "targetver.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-28T03:47:45.551Z",
+              "WhenOpened": "2024-10-28T07:05:59.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LearnGDIPlus.cpp",
-              "DocumentMoniker": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\LearnGDIPlus.cpp",
-              "RelativeDocumentMoniker": "LearnGDIPlus.cpp",
-              "ToolTip": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\LearnGDIPlus.cpp",
-              "RelativeToolTip": "LearnGDIPlus.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIplus.cpp",
+              "RelativeDocumentMoniker": "LearnGDIplus.cpp",
+              "ToolTip": "D:\\HCMUS\\N2K1 _ OOP\\OOP_HCMUS\\GDIplus\\LearnGDIplus\\LearnGDIplus.cpp",
+              "RelativeToolTip": "LearnGDIplus.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-28T03:32:11.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "framework.h",
-              "DocumentMoniker": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\framework.h",
-              "RelativeDocumentMoniker": "framework.h",
-              "ToolTip": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\framework.h",
-              "RelativeToolTip": "framework.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-28T03:48:31.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "resource.h",
-              "DocumentMoniker": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\resource.h",
-              "RelativeDocumentMoniker": "resource.h",
-              "ToolTip": "D:\\OOP_HCMUS\\GDIplus\\LearnGDIPlus\\resource.h",
-              "RelativeToolTip": "resource.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-28T03:32:44.637Z",
+              "WhenOpened": "2024-10-28T07:04:56.049Z",
               "EditorCaption": ""
             }
           ]

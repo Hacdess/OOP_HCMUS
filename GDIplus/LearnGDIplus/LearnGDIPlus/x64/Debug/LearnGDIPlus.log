@@ -1,2 +1,3 @@
 ﻿  LearnGDIPlus.cpp
-  LearnGDIPlus.vcxproj -> D:\OOP_HCMUS\GDIplus\LearnGDIPlus\x64\Debug\LearnGDIPlus.exe
+MSVCRTD.lib(exe_winmain.obj) : error LNK2019: unresolved external symbol WinMain referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+D:\HCMUS\N2K1 _ OOP\OOP_HCMUS\GDIplus\LearnGDIplus\x64\Debug\LearnGDIPlus.exe : fatal error LNK1120: 1 unresolved externals
