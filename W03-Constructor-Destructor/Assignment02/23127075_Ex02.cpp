@@ -22,11 +22,11 @@ int main() {
     // String-extracting constructor
     string s = "(2,3)-(4,3)-(3,4)";
     Triangle triangle5(s);
-    cout << "Triangle 5: " << triangle3.toString() << "\n\n";
+    cout << "Triangle 5: " << triangle5.toString() << "\n\n";
 
     // Clone
     Triangle* triangle6 = triangle5.clone();
-    cout << triangle6->toString() << "\n\n";
+    cout << "Triangle 6: " << triangle6->toString() << "\n\n";
     delete triangle6;
 
     return 0;

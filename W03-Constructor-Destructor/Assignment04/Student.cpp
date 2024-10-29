@@ -64,19 +64,8 @@ Student::Student(Student &&other) noexcept {
     this->gpa = other.gpa;
     other.gpa = 0;
 
-    if (other.fullname == nullptr)
-        this->fullname = nullptr;
-    else {
-        this->fullname = new char[strlen(other.fullname) + 1];
-        strcpy(this->fullname, other.fullname);
-    }
-
-    if (other.address == nullptr)
-        this->address = nullptr;
-    else {
-        this->address = new char[strlen(other.address) + 1];
-        strcpy(this->address, other.address);
-    }
+    this->fullname = other.fullname;
+    this->address = other.address;
 
     other.fullname = other.address = nullptr;
 }
@@ -151,5 +140,6 @@ string Student::toString() {
 }
 
 Student *Student::clone() {
+    cout << "Cloning...\n";
     return new Student(*this);
 }

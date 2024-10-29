@@ -22,7 +22,7 @@ int main() {
                 theater.viewSales();
                 break;
             case CHECK:
-                theater.check();
+                theater.checkAvailable();
                 break;
             default:
                 break;

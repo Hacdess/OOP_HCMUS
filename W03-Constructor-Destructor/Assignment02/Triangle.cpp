@@ -20,37 +20,37 @@ Triangle::Triangle(Point2D A, Point2D B, Point2D C) {
 Triangle::Triangle(const Triangle &other) {
     cout << "Triangle::Copy constructor" << endl;
 
-    this->A.setX(A.getX());
-    this->A.setY(A.getY());
+    this->A.setX(other.A.getX());
+    this->A.setY(other.A.getY());
 
-    this->B.setX(B.getX());
-    this->B.setY(B.getY());
+    this->B.setX(other.B.getX());
+    this->B.setY(other.B.getY());
 
-    this->C.setX(C.getX());
-    this->C.setY(C.getY());
+    this->C.setX(other.C.getX());
+    this->C.setY(other.C.getY());
 }
 
 Triangle::Triangle(Triangle &&other) noexcept {
     cout << "Triangle::Move constructor" << endl;
 
-    this->A.setX(A.getX());
-    this->A.setY(A.getY());
+    this->A.setX(other.A.getX());
+    this->A.setY(other.A.getY());
 
-    this->B.setX(B.getX());
-    this->B.setY(B.getY());
+    this->B.setX(other.B.getX());
+    this->B.setY(other.B.getY());
 
-    this->C.setX(C.getX());
-    this->C.setY(C.getY());
+    this->C.setX(other.C.getX());
+    this->C.setY(other.C.getY());
 
 
-    A.setX(0);
-    A.setY(0);
+    other.A.setX(0);
+    other.A.setY(0);
 
-    B.setX(0);
-    B.setY(0);
+    other.B.setX(0);
+    other.B.setY(0);
 
-    C.setX(0);
-    C.setY(0);
+    other.C.setX(0);
+    other.C.setY(0);
 }
 
 Triangle::Triangle(string s) {

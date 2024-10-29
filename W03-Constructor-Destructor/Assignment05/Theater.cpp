@@ -137,7 +137,7 @@ void Theater::viewSales() {
     state = MENU;
 }
 
-void Theater::check() {
+void Theater::checkAvailable() {
     char c;
     cout << "\n========== SEAT STATUS ==========\n";
     short count = 0;

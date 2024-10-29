@@ -14,8 +14,9 @@ class Theater {
     private:
         STATE state;
 
-        // 2D array for seats and prices
+        // 2D array for seats
         char seats[15][30];
+        // 2D array for prices
         float prices[15][30];
 
         // Sales: number of sold tickets and total revenue
@@ -35,7 +36,7 @@ class Theater {
         bool isValid(int row, int col);
         void purchase();
         void viewSales();
-        void check();
+        void checkAvailable();
 };
 
 #endif

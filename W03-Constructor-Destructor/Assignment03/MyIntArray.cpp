@@ -79,5 +79,6 @@ string MyIntArray::toString() {
 }
 
 MyIntArray *MyIntArray::clone() {
+    cout << "Cloning...\n";
     return new MyIntArray(*this);
 }

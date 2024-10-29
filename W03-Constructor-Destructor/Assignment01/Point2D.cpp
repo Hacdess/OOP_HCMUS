@@ -45,11 +45,11 @@ void Point2D::setY(int y) {
     this->y = y;
 }
 
-int Point2D::getX() {
+int Point2D::getX() const {
     return x;
 }
 
-int Point2D::getY() {
+int Point2D::getY() const {
     return y;
 }
 
@@ -58,5 +58,6 @@ string Point2D::toString() {
 }
 
 Point2D* Point2D::clone() {
+    cout << "Cloning...\n";
     return new Point2D(*this);
 }

@@ -1,10 +1,10 @@
-#include "Store.h"
+#include "Cart.h"
 
 int main() {
-    Store store;
-    if (store.getPRoduct("data.txt"));
-        while (store.getState())
-            store.run();
+    Cart cart;
+    if (cart.getProduct("data.txt"));
+        while (cart.getState())
+            cart.run();
 
     return 0;
 }
