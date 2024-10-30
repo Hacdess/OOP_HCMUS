@@ -8,6 +8,9 @@
 using namespace Gdiplus;
 #pragma comment (lib,"Gdiplus.lib")
 
-void onPaint(HDC hdc);
+
+VOID OnPaint(HDC hdc);
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+
 
 #endif
