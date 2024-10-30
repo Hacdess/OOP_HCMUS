@@ -23,34 +23,34 @@ int main() {
 	f2=f3*f4;
 	f5=f6/f3;
 
-	cout<<(f2==f3);
-	cout<<(f3!=f1);
-	cout<<(f2>=f5);
-	cout<<(f2>f5);
-	cout<<(f5<=f3);
-	cout<<(f5<f3);
+	cout<< f2 << " == " << f3 << ": " << (f2==f3) << endl;
+	cout<< f3 << " != " << f1 << ": " << (f3!=f1) << endl;
+	cout<< f2 << " >= " << f5 << ": " << (f2>=f5) << endl;
+	cout<< f2 << " > " << f5 << ": " << (f2>f5) << endl;
+	cout<< f5 << " <= " << f3 << ": " << (f5<=f2) << endl;
+	cout<< f5 << " < " << f3 << ": " << (f5<f2) << endl;
 
-
-	// f1=f2+3;
-	// f3=-7+f1;
-	// f5=7*f3;
-	// f6=f4-6;
+	f1=f2+3;
+	f3=-7+f1;
+	f5=7*f3;
+	f6=f4-6;
 	
-	// cout<<f3;
-	// cout<<f6;
+	cout<< "f3: " <<f3 << endl;
+	cout<< "f6: " <<f6 << endl;
 
-	// f1+=f5;
-	// f6-=f7;
-	// f8*=f1;
-	// f8/=f2;
+	f1+=f5;
+	f6-=f7;
+	f8*=f1;
+	f8/=f2;
 
-	// cout<<f8++;
-	// cout<<++f7;
+	cout<< "f8++: " << f8++ << endl;
+	cout<< "++f8: " << ++f7 << endl;
 	
-	// cout<<f8--;
-	// cout<<--f7;
+	cout<< "f8--: " << f8-- << endl;
+	cout<< "f7--: " << --f7 << endl;
 	
-	// float f=(float)f3;				// 3/2 => 1.5
+	float f=(float)f3;				// 3/2 => 1.5
+	cout << "Float f: " << f;
 
 	return 0;
 }

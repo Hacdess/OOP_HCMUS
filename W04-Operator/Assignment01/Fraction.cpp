@@ -1,18 +1,8 @@
 #include "Fraction.h"
 
-
-
 Fraction::Fraction() {
     numerator = 0;
     denominator = 1;
-}
-
-Fraction::Fraction(int numerator, int denominator) {
-    this->numerator = numerator;
-    this->denominator = denominator;
-}
-
-Fraction::~Fraction() {
 }
 
 int Fraction::findGreatestCommonDivisor(const int &a, const int &b) {
@@ -32,6 +22,15 @@ void Fraction::reduce() {
     }
 }
 
+Fraction::Fraction(int numerator, int denominator) {
+    this->numerator = numerator;
+    this->denominator = denominator;
+    reduce();
+}
+
+Fraction::~Fraction() {
+}
+
 void Fraction::Input() {
     cout << "Input the fraction's numerator and denominator (separated by space): ";
     cin >> numerator >> denominator;
@@ -44,21 +43,17 @@ void Fraction::Input() {
     reduce();
 }
 
-void Fraction::Output() const {
-    try {
-        if (denominator != 0) {
-            if (numerator % denominator == 0)
-                cout << numerator / denominator;
-            else
-                cout << numerator << '/' << denominator;
-        }
+ostream& operator<<(ostream& out, const Fraction& fraction) {
+    if (fraction.denominator != 0) {
+        if (fraction.numerator % fraction.denominator == 0)
+            out << fraction.numerator / fraction.denominator;
         else
-            throw invalid_argument("Error: Invalid fraction because the denominator mustn't be 0!");
+            out << fraction.numerator << '/' << fraction.denominator;
 
+        return out;
     }
-    catch(const std::exception& e) {
-        std::cerr << e.what() << '\n';
-    }
+    else
+        throw invalid_argument("Error: Invalid fraction because the denominator mustn't be 0!");
 }
 
 void Fraction::operator=(const Fraction &other) {
@@ -136,4 +131,102 @@ Fraction &Fraction::operator+=(const Fraction &other) {
     this->denominator = this->denominator * other.denominator;
     reduce();
     return *this;
+}
+
+Fraction &Fraction::operator-=(const Fraction &other) {
+    this->numerator = this->numerator * other.denominator - this->denominator * other.numerator;
+    this->denominator = this->denominator * other.denominator;
+    reduce();
+    return *this;
+}
+
+Fraction &Fraction::operator*=(const Fraction &other) {
+    this->numerator = this->numerator * other.numerator;
+    this->denominator = this->denominator * other.denominator;
+    reduce();
+    return *this;
+}
+
+Fraction &Fraction::operator/=(const Fraction &other) {
+    if (other.numerator == 0)
+        throw invalid_argument("Error: Can't divide by a fraction with a numerator of 0!\n");
+
+    this->numerator = numerator * other.denominator;
+    this->denominator = denominator * other.numerator;
+
+    if (this->denominator < 0) {
+        this->numerator *= -1;
+        this->denominator *= -1;
+    }
+
+    this->reduce();
+    return *this;
+}
+
+Fraction &Fraction::operator++() {
+    this->numerator += this->denominator;
+    reduce();
+    return *this;
+}
+
+Fraction Fraction::operator++(int) {
+    Fraction temp = *this;
+    this->numerator += this->denominator;
+    reduce(); 
+    return temp; 
+}
+
+Fraction &Fraction::operator--() {
+    this->numerator -= this->denominator;
+    reduce();
+    return *this;
+}
+
+Fraction Fraction::operator--(int) {
+    Fraction temp = *this;
+    this->numerator -= this->denominator;
+    reduce(); 
+    return temp; 
+}
+
+Fraction Fraction::operator+(int value) const {
+    return Fraction(this->numerator + value * denominator, this->denominator);
+}
+
+Fraction Fraction::operator-(int value) const {
+    return Fraction(numerator - value * denominator, denominator);
+}
+
+Fraction Fraction::operator*(int value) const {
+    return Fraction(numerator * value, denominator);
+}
+
+Fraction Fraction::operator/(int value) const {
+    if (value == 0)
+        throw invalid_argument("Error: Can't divide by a fraction with a numerator of 0!\n");
+    return Fraction(numerator, denominator * value);
+}
+
+Fraction operator+(int value, const Fraction &fraction) {
+    return Fraction(value * fraction.denominator + fraction.numerator, fraction.denominator);
+}
+
+Fraction operator-(int value, const Fraction &fraction) {
+    return Fraction(value * fraction.denominator - fraction.numerator, fraction.denominator);
+}
+
+Fraction operator*(int value, const Fraction &fraction) {
+    return Fraction(value * fraction.numerator, fraction.denominator);
+}
+
+Fraction operator/(int value, const Fraction &fraction) {
+    if (fraction.numerator == 0)
+        throw invalid_argument("Error: Can't divide by a fraction with a numerator of 0!\n");
+    return Fraction(value * fraction.denominator, fraction.numerator);
+}
+
+Fraction::operator float() const {
+    if (denominator == 0)
+        throw invalid_argument("Error: Can't divide by a fraction with a numerator of 0!\n");
+    return static_cast<float>(numerator) / denominator;
 }
