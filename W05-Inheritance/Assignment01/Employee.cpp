@@ -38,12 +38,15 @@ Employee::Employee(const string &data) {
 }
 
 void Employee::input() {
-    cout << "Enter ID: ";
-    cin >> id;
+    do {
+        cout << "Enter ID (positive integer): ";
+        cin >> id;
+    } while (id < 1);
+
     cin.ignore();
     cout << "Enter Full Name: ";
     getline(cin, fullName);
-    cout << "Enter Hire Date: ";
+    cout << "Enter Hire Date (string with format \"dd/mm/yyyy\"): ";
     getline(cin, hireDate);
     cout << "Enter Address: ";
     getline(cin, address);
