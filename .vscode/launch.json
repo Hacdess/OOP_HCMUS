@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/OOP_HCMUS/W05-Inheritance/Assignment01",
-      "program": "d:/OOP_HCMUS/W05-Inheritance/Assignment01/build/Debug/outDebug",
+      "cwd": "d:/OOP_HCMUS/W04-Operator/Assignment01",
+      "program": "d:/OOP_HCMUS/W04-Operator/Assignment01/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

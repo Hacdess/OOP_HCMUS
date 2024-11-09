@@ -1,0 +1,107 @@
+Base b1;
+Base constructor-0 param
+
+Base b2(3);
+Base constructor-1 param
+
+Base* pb = new Base(1);
+Base constructor-1 param     
+Base constructor-0 param   
+
+DerivedA da1;  
+DerivedA constructor-0 param 
+Base constructor-0 param  
+   
+DerivedA da2(2);
+DerivedA constructor-1 param 
+Base constructor-0 param   
+  
+DerivedA da3(2, 3);
+DerivedA constructor-2 params
+Base constructor-0 param     
+
+DerivedA da4(da2);
+Base constructor-0 param
+
+pb = new DerivedA(4, 5);
+DerivedA constructor-2 params
+Base constructor-0 param
+
+DerivedB db1;
+DerivedB constructor-0 param
+Base constructor-0 param
+
+DerivedB db2(2.7);
+DerivedB constructor-1 param
+Base constructor-1 param
+
+DerivedB db3(3, 2.7);
+DerivedB constructor-2 params
+Base constructor-0 param
+
+DerivedB constructor-0 param
+Base constructor-0 param
+DerivedB constructor-1 param
+Base constructor-1 param
+DerivedB constructor-2 params
+Base constructor-0 param
+DerivedB constructor-1 param
+Base constructor-1 param
+DerivedB constructor-2 params
+DerivedB constructor-1 param
+Base constructor-1 param
+DerivedB constructor-2 params
+DerivedB constructor-2 params
+Base copy constructor
+Base copy constructor
+DerivedB copy constructor
+Base constructor-1 param
+Base constructor-1 param
+DerivedB constructor-2 params
+DerivedB constructor-2 params
+Base copy constructor
+Base copy constructor
+Function f
+Function f
+Base destructor
+Base copy constructor
+Function f
+Base destructor
+Base copy constructor
+Function f
+Base copy constructor
+Function f
+Function f
+Base destructor
+Base copy constructor
+Base copy constructor
+Function f
+Function f
+Base destructor
+Base destructor
+Base destructor
+Base destructor
+DerivedB destructor
+DerivedB destructor
+Base destructor
+DerivedB destructor
+DerivedB destructor
+Base destructor
+Base destructor
+DerivedB destructor
+Base destructor
+DerivedB destructor
+DerivedB destructor
+Base destructor
+Base destructor
+DerivedA destructor
+DerivedA destructor
+Base destructor
+DerivedA destructor
+Base destructor
+DerivedA destructor
+Base destructor
+DerivedA destructor
+Base destructor
+Base destructor
+Base destructor
