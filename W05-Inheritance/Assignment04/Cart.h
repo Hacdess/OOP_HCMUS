@@ -20,6 +20,7 @@ class Cart {
 
         bool isDigit(char c);
         bool isNumber(string s);
+        bool saveOrders(string filename);
         string getRequest();
         void solveRequest(string request);
         void run();

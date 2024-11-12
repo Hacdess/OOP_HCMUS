@@ -15,7 +15,7 @@ bool Cart::getProduct(string filename) {
     if (!fin) {
         cout << "Can't open file!\n";
         state = 0;
-        return 0;
+        return false;
     }
 
     string getString;
@@ -41,7 +41,7 @@ bool Cart::getProduct(string filename) {
     }
 
     fin.close();
-    return 1;
+    return true;
 }
 
 void Cart::setState(bool state) {
@@ -64,6 +64,30 @@ bool Cart::isNumber(string s) {
             return 0;
 
     return 1;
+}
+
+bool Cart::saveOrders(string filename) {
+    ofstream fout(filename.c_str(), ios::app);
+    if (!fout.is_open()) {
+        cout << "Can't open file!\n";
+        return false;
+    }
+
+    fout << "=============== Order ===============\n";
+    fout << "Name - Quantity - Unit price\n";
+
+    int i = 0;
+    while (!products.empty()) {
+        if (products[i].getSelected()) {
+            fout << products[i].getName() << " - " << products[i].getQuantity() << " - " << products[i].getUnitPrice() << endl;
+            products.erase(products.begin() + i);
+        }
+        else
+            ++i;
+    }
+
+    fout.close();
+    return true;
 }
 
 string Cart::getRequest() {
@@ -123,7 +147,8 @@ void Cart::solveRequest(string request) {
         else {
             cout << "\nPurchased successfully!\n";
             cout << "\n===============================================================================================\n";
-            state = 0;
+            
+            saveOrders("orders.txt");
         }
     }
     else {
@@ -186,6 +211,7 @@ void Cart::solveRequest(string request) {
     }
 
     totalPrice = 0;
+    len = products.size();
     for (int i = 0; i < len; ++i)
         if (products[i].getSelected())
             totalPrice += (products[i].getUnitPrice() * products[i].getQuantity());

@@ -1,3 +1,5 @@
+Base's constructors
+
 Base b1;
 Base constructor-0 param => Base's default constructor
 
@@ -7,45 +9,48 @@ Base constructor-1 param => Base's 1-parameter constructor
 Base* pb = new Base(1);  
 Base constructor-1 param => Base's 1-parameter constructor
 
+
+DerivedA's constructors
+
 DerivedA da1;
 Base constructor-0 param => Base's default constructor
-DerivedA constructor-0 param => DerivedA's 1-parameter constructor
+DerivedA constructor-0 param => DerivedA's default constructor
 
 DerivedA da2(2);
-Base constructor-0 param
-DerivedA constructor-1 param
+Base constructor-0 param => Base's default constructor
+DerivedA constructor-1 param => DerivedA's 1-parameter constructor
 
 DerivedA da3(2, 3);
-Base constructor-0 param
-DerivedA constructor-2 params
+Base constructor-0 param => Base's default constructor
+DerivedA constructor-2 params => DerivedA's 2-parameter constructor
 
-DerivedA da4(da2);
-Base constructor-0 param
+DerivedA da4(da2); 
+Base constructor-0 param => Base's default constructor
 
 pb = new DerivedA(4, 5);
-Base constructor-0 param
-DerivedA constructor-2 params
+Base constructor-0 param => Base's default constructor
+DerivedA constructor-2 params => DerivedA's 2-parameter constructor
 
 
 DerivedB db1;
-Base constructor-0 param
+Base constructor-0 param => Base's default constructor
 DerivedB constructor-0 param
 
 DerivedB db2(2.7);
-Base constructor-0 param
-DerivedB constructor-1 param
+Base constructor-0 param => Base's default constructor
+DerivedB constructor-1 param DerivedB's 1-parameter constructor
 
 DerivedB db3(3, 2.7);
-Base constructor-1 param
-DerivedB constructor-2 params
+Base constructor-1 param => Base's 1-parameter constructor
+DerivedB constructor-2 params => DerivedB's 2-parameter constructor
 
 DerivedB db4(db2);
-Base copy constructor
-DerivedB copy constructor
+Base copy constructor => Base's copy constructor
+DerivedB copy constructor => DerivedB's copy constructor
 
 pb = new DerivedB(4, 5);
-Base constructor-1 param
-DerivedB constructor-2 params
+Base constructor-1 param => Base's 1-parameter constructo
+DerivedB constructor-2 params => DerivedB's 2-parameter constructor
 
 
 f(b1);
