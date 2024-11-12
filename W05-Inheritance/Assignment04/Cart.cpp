@@ -3,6 +3,11 @@
 Cart::Cart() {
     state = 1;
     totalPrice = 0;
+
+    for (int i = 10; i <= 50; i += 10) {
+        Promotion promotion(i, false);
+        promotions.push_back(promotion);
+    }
 }
 
 Cart::~Cart() {
@@ -77,7 +82,7 @@ bool Cart::saveOrders(string filename) {
     fout << "Name - Quantity - Unit price\n";
 
     int i = 0;
-    while (!products.empty()) {
+    while (i < products.size()) {
         if (products[i].getSelected()) {
             fout << products[i].getName() << " - " << products[i].getQuantity() << " - " << products[i].getUnitPrice() << endl;
             products.erase(products.begin() + i);
@@ -108,6 +113,19 @@ string Cart::getRequest() {
                      << setw(10) << ((products[i].getUnitPrice() == 0) ? "Free" : to_string(products[i].getUnitPrice()) + " VND") << endl;
     cout << "\n-----------------------------------------------------------------------------------------------\n";
 
+    cout << "Vouchers:\n";
+    len = promotions.size();
+    for (int i = 0; i < len; ++i)
+        cout << promotions[i].getDiscountValue() << '%' << ((i == len - 1) ? "\n" : ", ");
+    
+    cout << "Selected: ";
+    if (promotionIndex > -1)
+        cout << promotions[promotionIndex].getDiscountValue() << "%\n";
+    else
+        cout << "None!\n";
+
+    cout << "\n-----------------------------------------------------------------------------------------------\n";
+
     cout << "Total Prices: " << totalPrice << " VND" << endl;
     cout << "-----------------------------------------------------------------------------------------------\n";
     
@@ -116,8 +134,9 @@ string Cart::getRequest() {
     cout << "2. Remove a product: <product>|<key 'x'>\tEx: Keyboard|x\n";
     cout << "3. Change the number of a product: <product>|<number>\tEx: Keyboard|6\n";
     cout << "4. Select / unselect a product: <product>|<key 's'>\tEx: Keyboard|s\n";
-    cout << "5. Purchase: key 'p'\n";
-    cout << "6. Exit: key 'e'\n";
+    cout << "5. Select / change voucher: voucher|<index - start from 0>\t Ex: voucher|1\n";
+    cout << "6. Purchase: key 'p'\n";
+    cout << "7. Exit: key 'e'\n";
     cout << "-----------------------------------------------------------------------------------------------\n";
     cout << "Your selection: ";
     getline(cin, inputLine, '\n');
@@ -133,6 +152,7 @@ void Cart::solveRequest(string request) {
         cout << "Exiting...\n";
         cout << "\n===============================================================================================\n";
     }
+
     else if (request == "p") {
         bool isEmpty = 1;
 
@@ -146,68 +166,84 @@ void Cart::solveRequest(string request) {
             cout << "There is nothing to purchase. Please select products to purchase or key 'e' to exit.\n";
         else {
             cout << "\nPurchased successfully!\n";
-            cout << "\n===============================================================================================\n";
             
-            saveOrders("orders.txt");
+            if (saveOrders("orders.txt"))
+                cout << "Order saved successfully\n";
+            else
+                cout << "Failed to save order\n";
+
+            if (promotionIndex > -1) {
+                promotions.erase(promotions.begin() + promotionIndex);
+                promotionIndex = -1;
+            }
+            cout << "\n===============================================================================================\n";
         }
     }
+
     else {
         stringstream ss(request);
-        string product;
+        string object;
         string action;
 
-        getline(ss, product, '|');
+        getline(ss, object, '|');
         ss >> action;
 
-        bool notFound = 1;
-        for (int i = 0; i < len; ++i)
-            if (products[i].getName() == product) {
-                notFound = 0;
+        if (object == "voucher") {
+            promotionIndex = action[0] - '0';
+            if (promotionIndex < 0 || promotionIndex >= len)
+                cout << "Invalid voucher!\n";
+        }
+        else {
+            bool notFound = 1;
+            for (int i = 0; i < len; ++i)
+                if (products[i].getName() == object) {
+                    notFound = 0;
 
-                if (action == "+") {
-                    products[i].increase();
-                    totalPrice += products[i].getUnitPrice();
-                }
+                    if (action == "+") {
+                        products[i].increase();
+                        totalPrice += products[i].getUnitPrice();
+                    }
 
-                else if (action == "-") {
-                    products[i].decrease();
-                    totalPrice -= products[i].getUnitPrice();
+                    else if (action == "-") {
+                        products[i].decrease();
+                        totalPrice -= products[i].getUnitPrice();
 
-                    if (products[i].getQuantity() < 1) {
+                        if (products[i].getQuantity() < 1) {
+                            products.erase(products.begin() + i);
+                            --i;
+                        }
+                    }
+
+                    else if (action == "x") {
+                        totalPrice -= (products[i].getUnitPrice() * products[i].getQuantity());
                         products.erase(products.begin() + i);
                         --i;
                     }
-                }
 
-                else if (action == "x") {
-                    totalPrice -= (products[i].getUnitPrice() * products[i].getQuantity());
-                    products.erase(products.begin() + i);
-                    --i;
-                }
+                    else if (action == "s")
+                        products[i].setSelected(1 - products[i].getSelected());
 
-                else if (action == "s")
-                    products[i].setSelected(1 - products[i].getSelected());
-
-                else if (isNumber(action)) {
-                    int quantity = stoi(action);
-                    if (quantity < 0)
-                        cout << "Invalid selection!\n";
-                    else if (quantity == 0) {
-                        products.erase(products.begin() + i);
-                        --i;
+                    else if (isNumber(action)) {
+                        int quantity = stoi(action);
+                        if (quantity < 0)
+                            cout << "Invalid selection!\n";
+                        else if (quantity == 0) {
+                            products.erase(products.begin() + i);
+                            --i;
+                        }
+                        else
+                            products[i].setQuantity(quantity);
                     }
+
                     else
-                        products[i].setQuantity(quantity);
+                        cout << "Invalid selection!\n";
+
+                    break;
                 }
 
-                else
-                    cout << "Invalid selection!\n";
-
-                break;
-            }
-
-        if (notFound)
-            cout << "Can't find the product in the shopping cart!\n";
+            if (notFound)
+                cout << "Can't find the product in the shopping cart!\n";
+        }
     }
 
     totalPrice = 0;
@@ -215,6 +251,9 @@ void Cart::solveRequest(string request) {
     for (int i = 0; i < len; ++i)
         if (products[i].getSelected())
             totalPrice += (products[i].getUnitPrice() * products[i].getQuantity());
+
+    if (promotionIndex > -1)
+        totalPrice = totalPrice * (100 - promotions[promotionIndex].getDiscountValue() ) / 100;
 }
 
 void Cart::run() {

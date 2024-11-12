@@ -12,14 +12,14 @@ private:
 
 public:
     SavingBankAccount();
-
+    
     void input() override;
     void print() const override;
+    void createNew(const SavingBankAccount &oldAccount, double money);
     bool deposit(double money) override;
     bool withdraw(double money) override;
     bool withdrawImmediately(double money);
     double getBalance() override;
-    float getInterest();
 };
 
 #endif

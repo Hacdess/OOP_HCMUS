@@ -2,6 +2,7 @@
 #define _STORE_H_
 
 #include "Product.h"
+#include "Promotion.h"
 
 class Cart {
     private:
@@ -9,6 +10,8 @@ class Cart {
         // State = 0: off
         bool state;
         vector<Product> products;
+        vector<Promotion> promotions;
+        int promotionIndex = -1;
         int totalPrice;
     public:
         Cart();

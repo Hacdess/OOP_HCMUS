@@ -19,6 +19,7 @@ void BankAccount::input() {
 }
 
 void BankAccount::print() const {
+    cout << "Account information:\n";
     cout << "Account number: " << accountNumber << endl;
     cout << "Owner's name: " << name << endl;
     cout << "Owner's social ID: " << socialID << endl;
@@ -41,7 +42,7 @@ bool BankAccount::withdraw(double money) {
         return false;
     }
 
-    if (balance < money < 50000) {
+    if (balance - money < 50000) {
         cout << "Your balance will be less than 50000 once being withdrawed!\n";
         return false;
     }

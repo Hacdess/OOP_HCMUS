@@ -1,6 +1,0 @@
-=============== Order ===============
-Name - Quantity - Unit price
-Con chuot gaming - 1 - 566807
-=============== Order ===============
-Name - Quantity - Unit price
-Con chuot gaming - 1 - 566807
