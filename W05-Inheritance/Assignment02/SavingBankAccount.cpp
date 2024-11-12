@@ -1,7 +1,7 @@
 #include "SavingBankAccount.h"
 
 SavingBankAccount::SavingBankAccount()
-    : BankAccount(), annualInterestRate(0), period(0), currentSavingMonths(0) {}
+    : BankAccount(), annualInterestRate(0), period(0), currentSavingMonths(0), initBalance(0) {}
 
 void SavingBankAccount::input() {
     BankAccount::input();
@@ -15,6 +15,9 @@ void SavingBankAccount::input() {
 
     cout << "Enter current saving months: ";
     cin >> currentSavingMonths;
+
+    initBalance = balance;
+    balance = balance * pow(1 + annualInterestRate, currentSavingMonths);
 }
 
 void SavingBankAccount::print() const {
@@ -60,13 +63,16 @@ bool SavingBankAccount::withdraw(double money) {
     return BankAccount::withdraw(money);
 }
 
-bool SavingBankAccount::withdrawImmediately(double money) {
-    annualInterestRate = 0.02;
-    period = 0;
-
-    return BankAccount::withdraw(money);
+double SavingBankAccount::withdrawImmediately() {
+    balance = 0;
+    return initBalance * pow(1 + 0.02, currentSavingMonths);
 }
 
 double SavingBankAccount::getBalance() {
-    return balance * pow(1 + annualInterestRate / 12, currentSavingMonths);
+    return balance;
+}
+
+double SavingBankAccount::getInterest() {
+    cout << balance << " - " << initBalance << endl;
+    return balance - initBalance;
 }

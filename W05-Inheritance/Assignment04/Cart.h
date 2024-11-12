@@ -11,7 +11,7 @@ class Cart {
         bool state;
         vector<Product> products;
         vector<Promotion> promotions;
-        int promotionIndex = -1;
+        int promotionIndex;
         int totalPrice;
     public:
         Cart();

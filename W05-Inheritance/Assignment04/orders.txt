@@ -1,0 +1,3 @@
+=============== Order ===============
+Name - Quantity - Unit price
+Non bao hiem - 2 - 790000

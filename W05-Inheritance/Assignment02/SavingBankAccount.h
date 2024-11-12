@@ -6,9 +6,10 @@
 
 class SavingBankAccount : public BankAccount {
 private:
-    float annualInterestRate;
+    double annualInterestRate;
     int period;
     int currentSavingMonths;
+    double initBalance;
 
 public:
     SavingBankAccount();
@@ -18,8 +19,9 @@ public:
     void createNew(const SavingBankAccount &oldAccount, double money);
     bool deposit(double money) override;
     bool withdraw(double money) override;
-    bool withdrawImmediately(double money);
+    double withdrawImmediately();
     double getBalance() override;
+    double getInterest();
 };
 
 #endif

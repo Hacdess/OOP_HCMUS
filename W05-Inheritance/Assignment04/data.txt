@@ -1,4 +1,4 @@
 Product,Quantity,Price
-Rockbros Gang tay chong soc lai xe motor,1,319193
-Con chuot gaming,1,566807
-Qua tang,1,0
+Non bao hiem,1,790000
+Gang canh tay,1,38000
+Gang tay lai xe ho ngon,1,165000

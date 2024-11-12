@@ -3,6 +3,7 @@
 Cart::Cart() {
     state = 1;
     totalPrice = 0;
+    promotionIndex = -1;
 
     for (int i = 10; i <= 50; i += 10) {
         Promotion promotion(i, false);
