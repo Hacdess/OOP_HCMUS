@@ -2,6 +2,7 @@
 #define _DATE_H_
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Date {
