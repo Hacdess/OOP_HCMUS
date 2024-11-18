@@ -1,0 +1,253 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="24.8.4" pages="4">
+  <diagram name="Assignment01" id="YQNJQ6a5uJNEXBnVBi4n">
+    <mxGraphModel dx="2400" dy="947" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2CK58GjSMjasro4L5q2h-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-810" y="30" width="1270" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-1" value="&amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;abstract&lt;/span&gt;&amp;gt;&amp;gt; Employee" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-800" y="280" width="490" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-2" value="&lt;span class=&quot;hljs-comment&quot;&gt;# id: string&lt;/span&gt;&lt;br/&gt;&lt;span class=&quot;hljs-comment&quot;&gt;# fullName: string&lt;/span&gt;&lt;br/&gt;&lt;span class=&quot;hljs-comment&quot;&gt;# hireDate: string&lt;/span&gt;&lt;br/&gt;&lt;span class=&quot;hljs-comment&quot;&gt;# address: string&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="TGg97sCdS2oQXF3Zb6yF-1" vertex="1">
+          <mxGeometry y="26" width="490" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="TGg97sCdS2oQXF3Zb6yF-1" vertex="1">
+          <mxGeometry y="90" width="490" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-4" value="&lt;div&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Employee&lt;/span&gt;()&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Employee&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;id&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;fullName&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;hireDate&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;address&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Employee&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;other&lt;/span&gt;: Employee)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Employee&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;other&lt;/span&gt;: Employee&amp;amp;&amp;amp;)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Employee&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;data&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;&lt;br&gt;+ &amp;lt;&amp;lt;virtual&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;input&lt;/span&gt;()&lt;br&gt;+ &amp;lt;&amp;lt;virtual&amp;gt;&amp;gt; &lt;span class=&quot;hljs-keyword&quot;&gt;print&lt;/span&gt;() &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt;&lt;br&gt;+ &amp;lt;&amp;lt;pure virtual&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;computeSalary&lt;/span&gt;(): long&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="TGg97sCdS2oQXF3Zb6yF-1" vertex="1">
+          <mxGeometry y="98" width="490" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-5" value="&amp;lt;&amp;lt;concrete&amp;gt;&amp;gt; OfficeEmployee      " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-160" y="400" width="610" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-6" value="&lt;span class=&quot;hljs-comment&quot;&gt;- workingDays: int&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;hljs-comment&quot;&gt;- payRatePerDay: const int = 300000&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="TGg97sCdS2oQXF3Zb6yF-5" vertex="1">
+          <mxGeometry y="26" width="610" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="TGg97sCdS2oQXF3Zb6yF-5" vertex="1">
+          <mxGeometry y="60" width="610" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-8" value="+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;OfficeEmployee&lt;/span&gt;()&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;OfficeEmployee&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;id&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;fullName&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;hireDate&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;address&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;workingDays&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;OfficeEmployee&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;other&lt;/span&gt;: OfficeEmployee)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;OfficeEmployee&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;other&lt;/span&gt;: OfficeEmployee&amp;amp;&amp;amp;)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;OfficeEmployee&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;data&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;)&lt;div&gt;&lt;br&gt;+ &amp;lt;&amp;lt;override&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;input&lt;/span&gt;()&lt;br&gt;+ &amp;lt;&amp;lt;override&amp;gt;&amp;gt; &lt;span class=&quot;hljs-keyword&quot;&gt;print&lt;/span&gt;() &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt;&lt;br&gt;+ &amp;lt;&amp;lt;override&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;computeSalary&lt;/span&gt;() &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="TGg97sCdS2oQXF3Zb6yF-5" vertex="1">
+          <mxGeometry y="68" width="610" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-10" value="&amp;lt;&amp;lt;concrete&amp;gt;&amp;gt; Worker      " style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-160" y="150" width="580" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-11" value="&lt;span class=&quot;hljs-comment&quot;&gt;- producedItems: int&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;hljs-comment&quot;&gt;- payRatePerItem: const int&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="TGg97sCdS2oQXF3Zb6yF-10" vertex="1">
+          <mxGeometry y="26" width="580" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="TGg97sCdS2oQXF3Zb6yF-10" vertex="1">
+          <mxGeometry y="60" width="580" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-13" value="+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Worker&lt;/span&gt;()&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Worker&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;id&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;fullName&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;hireDate&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;address&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;producedItems&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Worker&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;other&lt;/span&gt;: Worker)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Worker&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;other&lt;/span&gt;: Worker&amp;amp;&amp;amp;)&lt;br&gt;+ &amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Worker&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;data&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;)&lt;div&gt;&lt;br&gt;+ &amp;lt;&amp;lt;override&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;input&lt;/span&gt;()&lt;br&gt;+ &amp;lt;&amp;lt;override&amp;gt;&amp;gt; &lt;span class=&quot;hljs-keyword&quot;&gt;print&lt;/span&gt;() &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt;&lt;br&gt;+ &amp;lt;&amp;lt;override&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;computeSalary&lt;/span&gt;() &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="TGg97sCdS2oQXF3Zb6yF-10" vertex="1">
+          <mxGeometry y="68" width="580" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="TGg97sCdS2oQXF3Zb6yF-14" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=-0.002;exitY=0.263;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="TGg97sCdS2oQXF3Zb6yF-13" edge="1">
+          <mxGeometry x="0.0014" width="160" relative="1" as="geometry">
+            <mxPoint x="-400" y="240" as="sourcePoint" />
+            <mxPoint x="-310" y="400" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="-230" y="255" />
+              <mxPoint x="-230" y="400" />
+              <mxPoint x="-310" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2CK58GjSMjasro4L5q2h-7" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="TGg97sCdS2oQXF3Zb6yF-14">
+          <mxGeometry x="0.6466" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2CK58GjSMjasro4L5q2h-1" value="Company&amp;nbsp;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-665" y="40" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2CK58GjSMjasro4L5q2h-2" value="&lt;span class=&quot;hljs-section&quot;&gt;- employees: vector&lt;span class=&quot;xml&quot;&gt;&amp;lt;Employee*&amp;gt;&lt;/span&gt;&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2CK58GjSMjasro4L5q2h-1">
+          <mxGeometry y="26" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="2CK58GjSMjasro4L5q2h-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="2CK58GjSMjasro4L5q2h-1">
+          <mxGeometry y="50" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="2CK58GjSMjasro4L5q2h-4" value="&lt;span class=&quot;hljs-bullet&quot;&gt;+&lt;/span&gt; &amp;lt;&lt;span class=&quot;xml&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;destructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; ~Company()&lt;div&gt;&lt;br&gt;&lt;span class=&quot;hljs-bullet&quot;&gt;+&lt;/span&gt; inputEmployees()&lt;br&gt;&lt;span class=&quot;hljs-bullet&quot;&gt;+&lt;/span&gt; printAllEmployees() const&lt;br&gt;&lt;span class=&quot;hljs-bullet&quot;&gt;+&lt;/span&gt; computeTotalSalary() const&lt;br&gt;&lt;span class=&quot;hljs-bullet&quot;&gt;+&lt;/span&gt; printHighestSalaryEmployees() const&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2CK58GjSMjasro4L5q2h-1">
+          <mxGeometry y="58" width="220" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="2CK58GjSMjasro4L5q2h-5" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="TGg97sCdS2oQXF3Zb6yF-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-230" y="400" as="sourcePoint" />
+            <mxPoint x="-330" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2CK58GjSMjasro4L5q2h-8" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;fontSize=12;curved=1;entryX=0.495;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="TGg97sCdS2oQXF3Zb6yF-1" target="2CK58GjSMjasro4L5q2h-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-440" y="220" as="sourcePoint" />
+            <mxPoint x="-280" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="7LjIUoKTwHBkMS1QZCXQ" name="Assignment04">
+    <mxGraphModel dx="900" dy="1424" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-16" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="-330" width="700" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="zTO4zdI9xtOOPSFrGwGv-1" value="&amp;lt;&amp;lt;concrete&amp;gt;&amp;gt; Promotion&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="-320" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="zTO4zdI9xtOOPSFrGwGv-2" value="- discountValue: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;&lt;br/&gt;- selected: &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="zTO4zdI9xtOOPSFrGwGv-1">
+          <mxGeometry y="26" width="300" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="zTO4zdI9xtOOPSFrGwGv-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="zTO4zdI9xtOOPSFrGwGv-1">
+          <mxGeometry y="60" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zTO4zdI9xtOOPSFrGwGv-4" value="&amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Promotion&lt;/span&gt;()&lt;br&gt;&amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Promotion&lt;/span&gt;(value: int, selected: bool)&lt;div&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;setDiscountValue&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;value&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getDiscountValue&lt;/span&gt;() &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;setSelected&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;selected&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getSelected&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="zTO4zdI9xtOOPSFrGwGv-1">
+          <mxGeometry y="68" width="300" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-5" value="&lt;div&gt;&amp;lt;&amp;lt;concrete&amp;gt;&amp;gt; Product&amp;nbsp;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="-120" width="360" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-6" value="- name: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;&lt;br/&gt;- quantity: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;&lt;br/&gt;- unitPrice: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;&lt;br/&gt;- selected: &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nnHAM5i-w1DGaehoVg1B-5">
+          <mxGeometry y="26" width="360" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="nnHAM5i-w1DGaehoVg1B-5">
+          <mxGeometry y="90" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-8" value="&amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Product&lt;/span&gt;()&lt;br&gt;&amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Product&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;quantity&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;, &lt;span class=&quot;hljs-attr&quot;&gt;unitPrice&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;)&lt;br&gt;&amp;lt;&amp;lt;destructor&amp;gt;&amp;gt; ~&lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Product&lt;/span&gt;()&lt;div&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;setName&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;setQuantity&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;quantity&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;setUnitPrice&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;unitPrice&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;setSelected&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;selected&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getName&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getQuantity&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getUnitPrice&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getSelected&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;increase&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;decrease&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nnHAM5i-w1DGaehoVg1B-5">
+          <mxGeometry y="98" width="360" height="212" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-10" value="&lt;div&gt;&amp;lt;&amp;lt;concrete&amp;gt;&amp;gt; Cart&amp;nbsp;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="-240" width="210" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-11" value="- state: &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;&lt;br&gt;- products: vector&amp;lt;Product&amp;gt;&lt;br&gt;- promotions: vector&amp;lt;Promotion&amp;gt;&lt;br&gt;- promotionIndex: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;&lt;br&gt;- totalPrice: &lt;span class=&quot;hljs-keyword&quot;&gt;int&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nnHAM5i-w1DGaehoVg1B-10">
+          <mxGeometry y="26" width="210" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="nnHAM5i-w1DGaehoVg1B-10">
+          <mxGeometry y="110" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-13" value="&amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Cart&lt;/span&gt;()&lt;br&gt;&amp;lt;&amp;lt;destructor&amp;gt;&amp;gt; ~&lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;Cart&lt;/span&gt;()&lt;div&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getProduct&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;filename&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;setState&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;state&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getState&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;isDigit&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;c&lt;/span&gt;: char): &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;isNumber&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;s&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;saveOrders&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;filename&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;bool&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;getRequest&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;solveRequest&lt;/span&gt;(&lt;span class=&quot;hljs-attr&quot;&gt;request&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;string&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br&gt;+ &lt;span class=&quot;hljs-title function_ invoke__&quot;&gt;run&lt;/span&gt;(): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nnHAM5i-w1DGaehoVg1B-10">
+          <mxGeometry y="118" width="210" height="202" as="geometry" />
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-14" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;fontSize=12;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.003;entryY=0.21;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="zTO4zdI9xtOOPSFrGwGv-4" target="nnHAM5i-w1DGaehoVg1B-13">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="360" y="-100" as="sourcePoint" />
+            <mxPoint x="290" y="-80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="-196" />
+              <mxPoint x="350" y="-80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nnHAM5i-w1DGaehoVg1B-15" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="nnHAM5i-w1DGaehoVg1B-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="-80" as="sourcePoint" />
+            <mxPoint x="350" y="-80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2UGJMH584vD-zmC2fBh0" name="Assignment02">
+    <mxGraphModel dx="756" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7vMs27yRKn301OWFRiwu-10" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="420" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-1" value="&amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;abstract&lt;/span&gt;&amp;gt;&amp;gt; BankAccount" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="240" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-2" value="# accountNumber: &lt;span class=&quot;hljs-built_in&quot;&gt;string&lt;/span&gt;&lt;br&gt;# name: &lt;span class=&quot;hljs-built_in&quot;&gt;string&lt;/span&gt;&lt;br&gt;# socialID: &lt;span class=&quot;hljs-built_in&quot;&gt;string&lt;/span&gt;&lt;br&gt;# balance: &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="7vMs27yRKn301OWFRiwu-1">
+          <mxGeometry y="26" width="240" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="7vMs27yRKn301OWFRiwu-1">
+          <mxGeometry y="90" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-4" value="&amp;nbsp;&amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; BankAccount()&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;virtual&lt;/span&gt;&amp;gt;&amp;gt; input(): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;virtual&lt;/span&gt;&amp;gt;&amp;gt; print() &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;virtual&lt;/span&gt;&amp;gt;&amp;gt; deposit(money: &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;): &lt;span class=&quot;hljs-built_in&quot;&gt;bool&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;virtual&lt;/span&gt;&amp;gt;&amp;gt; withdraw(money: &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;): &lt;span class=&quot;hljs-built_in&quot;&gt;bool&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;virtual&lt;/span&gt;&amp;gt;&amp;gt; getBalance(): &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;destructor&amp;gt;&amp;gt; ~BankAccount()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="7vMs27yRKn301OWFRiwu-1">
+          <mxGeometry y="98" width="240" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-5" value="&amp;lt;&amp;lt;concrete&amp;gt;&amp;gt; SavingBankAccount" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="400" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-6" value="- annualInterestRate: &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;&lt;br/&gt;        - period: &lt;span class=&quot;hljs-built_in&quot;&gt;int&lt;/span&gt;&lt;br/&gt;        - currentSavingMonths: &lt;span class=&quot;hljs-built_in&quot;&gt;int&lt;/span&gt;&lt;br/&gt;        - initBalance: &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="7vMs27yRKn301OWFRiwu-5">
+          <mxGeometry y="26" width="400" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="7vMs27yRKn301OWFRiwu-5">
+          <mxGeometry y="90" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-8" value="&amp;lt;&amp;lt;constructor&amp;gt;&amp;gt; SavingBankAccount()&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;override&lt;/span&gt;&amp;gt;&amp;gt; input(): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;override&lt;/span&gt;&amp;gt;&amp;gt; print() &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt;: &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;override&lt;/span&gt;&amp;gt;&amp;gt; deposit(money: &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;): &lt;span class=&quot;hljs-built_in&quot;&gt;bool&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;override&lt;/span&gt;&amp;gt;&amp;gt; withdraw(money: &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;): &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-built_in&quot;&gt;bool&lt;/span&gt;&lt;br/&gt;        &lt;span class=&quot;hljs-title&quot;&gt;createNew&lt;/span&gt;(&lt;span class=&quot;hljs-params&quot;&gt;oldAccount: &lt;span class=&quot;hljs-keyword&quot;&gt;const&lt;/span&gt; SavingBankAccount, money: &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;&lt;/span&gt;): &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt;&lt;br/&gt;        &lt;span class=&quot;hljs-title&quot;&gt;withdrawImmediately&lt;/span&gt;(): &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;&lt;br/&gt;        &amp;lt;&amp;lt;&lt;span class=&quot;hljs-keyword&quot;&gt;override&lt;/span&gt;&amp;gt;&amp;gt; &lt;span class=&quot;hljs-title&quot;&gt;getBalance&lt;/span&gt;(): &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;&lt;br/&gt;        &lt;span class=&quot;hljs-title&quot;&gt;getInterest&lt;/span&gt;(): &lt;span class=&quot;hljs-built_in&quot;&gt;double&lt;/span&gt;&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="7vMs27yRKn301OWFRiwu-5">
+          <mxGeometry y="98" width="400" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="7vMs27yRKn301OWFRiwu-9" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.495;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="7vMs27yRKn301OWFRiwu-5" target="7vMs27yRKn301OWFRiwu-4">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="190" y="460" as="sourcePoint" />
+            <mxPoint x="350" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Assignment03" id="NVvIH8OnzMLCo-hPhSAw">
+    <mxGraphModel dx="1072" dy="855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-0" />
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-1" parent="0Cznv4Zb2hdXObYdEt9H-0" />
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-1">
+          <mxGeometry x="70" y="150" width="830" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-3" value="&amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;abstract&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; Base" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-1">
+          <mxGeometry x="365" y="220" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-4" value="- t: int&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-3">
+          <mxGeometry y="26" width="240" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-5" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-3">
+          <mxGeometry y="50" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-6" value="&amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; Base()&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; Base(int u)&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; Base(const Base&amp;amp; b)&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;destructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; ~Base()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-3">
+          <mxGeometry y="58" width="240" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-7" value="&amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;concrete&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedA" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-1">
+          <mxGeometry x="80" y="440" width="400" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-8" value="- a: int&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-7">
+          <mxGeometry y="26" width="400" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-7">
+          <mxGeometry y="50" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-10" value="&amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedA()&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedA(int x)&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedA(int u, int x)&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedA(const DerivedA&amp;amp; da)&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;destructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; ~DerivedA()&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;virtual&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; print(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-7">
+          <mxGeometry y="58" width="400" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="0Cznv4Zb2hdXObYdEt9H-11" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.495;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="0Cznv4Zb2hdXObYdEt9H-1" source="0Cznv4Zb2hdXObYdEt9H-7" target="0Cznv4Zb2hdXObYdEt9H-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="190" y="460" as="sourcePoint" />
+            <mxPoint x="350" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIr-TYiqwJKqSLGpYPb5-0" value="&amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;concrete&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedB" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="0Cznv4Zb2hdXObYdEt9H-1">
+          <mxGeometry x="490" y="440" width="400" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="BIr-TYiqwJKqSLGpYPb5-1" value="        - b: float&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="BIr-TYiqwJKqSLGpYPb5-0">
+          <mxGeometry y="26" width="400" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="BIr-TYiqwJKqSLGpYPb5-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="BIr-TYiqwJKqSLGpYPb5-0">
+          <mxGeometry y="50" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="BIr-TYiqwJKqSLGpYPb5-3" value="&amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedB()&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedB(float x)&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedB(int u, float x)&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;constructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; DerivedB(const DerivedB&amp;amp; db)&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;destructor&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; ~DerivedB()&lt;br/&gt;        &amp;lt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-name&quot;&gt;virtual&lt;/span&gt;&amp;gt;&lt;/span&gt;&amp;gt; print(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="BIr-TYiqwJKqSLGpYPb5-0">
+          <mxGeometry y="58" width="400" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="BIr-TYiqwJKqSLGpYPb5-4" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.582;entryY=1.034;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="0Cznv4Zb2hdXObYdEt9H-1" source="BIr-TYiqwJKqSLGpYPb5-0" target="0Cznv4Zb2hdXObYdEt9H-6">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="290" y="450" as="sourcePoint" />
+            <mxPoint x="439" y="392" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
