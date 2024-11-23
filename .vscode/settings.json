@@ -72,6 +72,13 @@
     "type_traits": "cpp",
     "atomic": "cpp",
     "iterator": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "algorithm": "cpp",
+    "memory": "cpp",
+    "random": "cpp",
+    "fstream": "cpp",
+    "istream": "cpp",
+    "numeric": "cpp",
+    "streambuf": "cpp"
   }
 }
