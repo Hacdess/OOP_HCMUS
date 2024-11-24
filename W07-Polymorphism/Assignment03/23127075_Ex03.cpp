@@ -13,7 +13,7 @@ int main()
 
     int gateCount;
 
-    if (prince.canRescue(gateCount, castle.getGates()))
+    if (prince.canRescue(gateCount, castle))
     {
         cout << "Princed rescued the princess successfully!\n";
         prince.output();

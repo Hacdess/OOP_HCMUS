@@ -1,11 +1,8 @@
 #ifndef _PRINCE_H_
 #define _PRINCE_H_
 
-#include "Gate.h"
+#include "Castle.h"
 #include <iostream>
-#include <vector>
-
-using namespace std;
 
 using namespace std;
 
@@ -21,7 +18,7 @@ public:
 
     void input();
     void output() const;
-    bool canRescue(int &gateCount, vector <Gate*> gates);
+    bool canRescue(int &gateCount, Castle castle);
 };
 
 #endif

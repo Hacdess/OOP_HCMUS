@@ -8,7 +8,6 @@ class Gate
 public:
     virtual void input() = 0;
     virtual void output() = 0;
-
     virtual bool canPass(int &money, const int &IQ, int &strength) = 0;
 };
 
@@ -20,7 +19,6 @@ private:
 public:
     void input() override;
     void output() override;
-
     virtual bool canPass(int &money, const int &IQ, int &strength);
 };
 
@@ -32,7 +30,6 @@ private:
 public:
     void input() override;
     void output() override;
-
     virtual bool canPass(int &money, const int &IQ, int &strength);
 };
 
@@ -44,7 +41,6 @@ private:
 public:
     void input() override;
     void output() override;
-
     virtual bool canPass(int &money, const int &IQ, int &strength);
 };
 

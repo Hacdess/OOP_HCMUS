@@ -38,9 +38,11 @@ void Prince::output() const
     cout << "Strength: " << strengthLevel << endl;
 }
 
-bool Prince::canRescue(int &gateCount, vector<Gate *> gates)
+bool Prince::canRescue(int &gateCount, Castle castle)
 {
     gateCount = 0;
+
+    vector<Gate*> gates = castle.getGates();
     
     int numbGates = gates.size();
 
