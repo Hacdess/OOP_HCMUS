@@ -20,7 +20,7 @@ int CFile::getSize() const {
 
 void CFile::print(bool isPrintHiddenItems) const {
     if (isHidden && !isPrintHiddenItems) return;
-    cout << "- File: " << name << " (" << size << " KB)" << endl;
+    cout << "\t- File: " << name << " (" << size << " KB)" << endl;
 }
 
 bool CFile::isFolder() const {
@@ -37,8 +37,26 @@ CFolder::~CFolder() {
     items.clear();
 }
 
+int CFolder::getSize() const {
+    int totalSize = 0;
+    for (CItem* item : items) {
+        totalSize += item->getSize();
+    }
+    return totalSize;
+}
+
 void CFolder::add(CItem* item) {
     items.push_back(item);
+}
+
+void CFolder::print(bool isPrintHiddenItems) const {
+    if (isHidden && !isPrintHiddenItems) return;
+
+    cout << "+ Folder: " << name << " (" << getSize() << " KB)" << endl;
+    for (CItem* item : items) {
+        cout << '\t';
+        item->print(isPrintHiddenItems);
+    }
 }
 
 CItem* CFolder::removeByName(const string& name) {
@@ -59,23 +77,6 @@ CItem* CFolder::findByName(const string& name) {
         }
     }
     return nullptr;
-}
-
-int CFolder::getSize() const {
-    int totalSize = 0;
-    for (CItem* item : items) {
-        totalSize += item->getSize();
-    }
-    return totalSize;
-}
-
-void CFolder::print(bool isPrintHiddenItems) const {
-    if (isHidden && !isPrintHiddenItems) return;
-
-    cout << "+ Folder: " << name << " (" << getSize() << " KB)" << endl;
-    for (CItem* item : items) {
-        item->print(isPrintHiddenItems);
-    }
 }
 
 bool CFolder::isFolder() const {

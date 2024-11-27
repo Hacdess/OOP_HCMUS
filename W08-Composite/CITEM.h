@@ -1,5 +1,3 @@
-
-
 #ifndef _CITEM_H_
 #define _CITEM_H_
 
@@ -21,8 +19,12 @@ public:
 
     virtual int getSize() const = 0;
     string getName() const;
-    void setHidden(bool isHidden, bool isAlsoApplyToChildren);
+    
     virtual void print(bool isPrintHiddenItems) const = 0;
+
+    // Not done yet
+    void setHidden(bool isHidden, bool isAlsoApplyToChildren); // 9, 10
+    
     virtual bool isFolder() const = 0;
 };
 
@@ -31,7 +33,9 @@ class CFile : public CItem {
 
 public:
     CFile(const string& name, int size); // 2
+
     int getSize() const override;
+
     void print(bool isPrintHiddenItems) const override;
     bool isFolder() const override;
 };
@@ -43,12 +47,15 @@ public:
     CFolder(const string& name); // 1
     ~CFolder();
 
+    int getSize() const override;
+
     void add(CItem* item); // 3
     void print(bool isPrintHiddenItems) const override; // 5
+    
+    // Not done yet
     CItem* removeByName(const string& name); // 6
     CItem* findByName(const string& name); // 7
 
-    int getSize() const override;
     bool isFolder() const override;
 };
 
