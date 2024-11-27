@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="24.9.0" pages="3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="24.9.1" pages="3">
   <diagram name="Assignment01" id="YQNJQ6a5uJNEXBnVBi4n">
     <mxGraphModel dx="3035" dy="1420" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -88,10 +88,37 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2UGJMH584vD-zmC2fBh0" name="Assignment02">
-    <mxGraphModel dx="643" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="514" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="6atmM3BSDeluypJcWZnI-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="70" width="380" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="SkJozD6RML8bg3_zTO8s-1" value="&lt;span class=&quot;hljs-title&quot;&gt;A&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="360" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="SkJozD6RML8bg3_zTO8s-2" value="&lt;span class=&quot;hljs-selector-tag&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;hljs-selector-tag&quot;&gt;m_s&lt;/span&gt;: &lt;span class=&quot;hljs-selector-tag&quot;&gt;char&lt;/span&gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="SkJozD6RML8bg3_zTO8s-1" vertex="1">
+          <mxGeometry y="26" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="SkJozD6RML8bg3_zTO8s-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="SkJozD6RML8bg3_zTO8s-1" vertex="1">
+          <mxGeometry y="52" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SkJozD6RML8bg3_zTO8s-4" value="+ &amp;lt;&amp;lt; constructor &amp;gt;&amp;gt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;A&lt;/span&gt;()&lt;br&gt;        +&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;&amp;lt;&amp;lt; constructor &amp;gt;&amp;gt; A&lt;/span&gt;(&lt;span class=&quot;hljs-attribute&quot;&gt;s&lt;/span&gt;: char*)&lt;br&gt;        +&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;&amp;lt;&amp;lt; constructor &amp;gt;&amp;gt; A&lt;/span&gt;(&lt;span class=&quot;hljs-attribute&quot;&gt;other&lt;/span&gt;: const A&amp;amp;)&lt;br&gt;        +&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;&amp;lt;&amp;lt; destructor &amp;gt;&amp;gt; &amp;lt;&amp;lt; virtual &amp;gt;&amp;gt;&lt;/span&gt;&amp;nbsp;~&lt;span class=&quot;hljs-selector-tag&quot;&gt;A&lt;/span&gt;()&lt;div&gt;&lt;br&gt;        +&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;lt;&amp;lt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-selector-tag&quot;&gt;virtual&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;gt;&amp;gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot; class=&quot;hljs-selector-tag&quot;&gt;prepare&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;        + &lt;span class=&quot;hljs-selector-tag&quot;&gt;display&lt;/span&gt;(): void&lt;br&gt;        + &amp;lt;&amp;lt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;friend&lt;/span&gt;&amp;nbsp;&amp;gt;&amp;gt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;operator&lt;/span&gt;&amp;gt;&amp;gt;(&lt;span class=&quot;hljs-attribute&quot;&gt;is&lt;/span&gt;: istream&amp;amp;, &lt;span class=&quot;hljs-attribute&quot;&gt;a&lt;/span&gt;: A&amp;amp;): &lt;span class=&quot;hljs-selector-tag&quot;&gt;istream&amp;amp;&lt;/span&gt;&lt;br&gt;        + &amp;lt;&amp;lt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;friend&lt;/span&gt;&amp;nbsp;&amp;gt;&amp;gt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;operator&lt;/span&gt;&amp;lt;&amp;lt;(&lt;span class=&quot;hljs-attribute&quot;&gt;os&lt;/span&gt;: ostream&amp;amp;, &lt;span class=&quot;hljs-attribute&quot;&gt;a&lt;/span&gt;: const A&amp;amp;): &lt;span class=&quot;hljs-selector-tag&quot;&gt;ostream&amp;amp;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="SkJozD6RML8bg3_zTO8s-1" vertex="1">
+          <mxGeometry y="60" width="360" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p9lcvrRq9LaIk5bNutK2-1" value="B" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="350" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p9lcvrRq9LaIk5bNutK2-4" value="+ &amp;lt;&amp;lt; constructor &amp;gt;&amp;gt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;B&lt;/span&gt;(&lt;span class=&quot;hljs-attribute&quot;&gt;s&lt;/span&gt;: char*)&lt;br&gt;        +&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;&amp;lt;&amp;lt; constructor &amp;gt;&amp;gt; B&lt;/span&gt;(&lt;span class=&quot;hljs-attribute&quot;&gt;b&lt;/span&gt;: const B&amp;amp;)&lt;br&gt;&lt;br&gt;&lt;div&gt;        + &amp;lt;&amp;lt; override &amp;gt;&amp;gt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;prepare&lt;/span&gt;(): void&lt;div&gt;+ &amp;lt;&amp;lt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;friend&lt;/span&gt;&amp;nbsp;&amp;gt;&amp;gt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;operator&lt;/span&gt;&amp;gt;&amp;gt;(&lt;span class=&quot;hljs-attribute&quot;&gt;is&lt;/span&gt;: istream&amp;amp;, b: B&amp;amp;):&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;istream&amp;amp;&lt;/span&gt;&lt;br&gt;+ &amp;lt;&amp;lt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;friend&lt;/span&gt;&amp;nbsp;&amp;gt;&amp;gt;&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;operator&lt;/span&gt;&amp;lt;&amp;lt;(&lt;span class=&quot;hljs-attribute&quot;&gt;os&lt;/span&gt;: ostream&amp;amp;, b: const B&amp;amp;):&amp;nbsp;&lt;span class=&quot;hljs-selector-tag&quot;&gt;ostream&amp;amp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="p9lcvrRq9LaIk5bNutK2-1" vertex="1">
+          <mxGeometry y="26" width="360" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="6atmM3BSDeluypJcWZnI-1" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.495;entryY=1.004;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="p9lcvrRq9LaIk5bNutK2-1" target="SkJozD6RML8bg3_zTO8s-4" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="190" y="270" as="sourcePoint" />
+            <mxPoint x="350" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
