@@ -10,8 +10,7 @@ string CItem::getName() const {
 CFile::CFile(const string& name, const int& size)
     : CItem(name), size(size) {}
 
-void CFile::setHidden(bool isHidden, bool isAlsoApplyToChildren)
-{
+void CFile::setHidden(bool isHidden, bool isAlsoApplyToChildren) {
     this->isHidden = isHidden;
 }
 
@@ -43,8 +42,7 @@ CFolder::~CFolder() {
     items.clear();
 }
 
-void CFolder::setHidden(bool isHidden, bool isAlsoApplyToChildren)
-{
+void CFolder::setHidden(bool isHidden, bool isAlsoApplyToChildren) {
     this->isHidden = isHidden;
 
     if (isAlsoApplyToChildren)
