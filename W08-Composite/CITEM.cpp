@@ -7,12 +7,13 @@ string CItem::getName() const {
     return name;
 }
 
-void CItem::setHidden(bool isHidden, bool isAlsoApplyToChildren) {
-    this->isHidden = isHidden;
-}
-
-CFile::CFile(const string& name, int size)
+CFile::CFile(const string& name, const int& size)
     : CItem(name), size(size) {}
+
+void CFile::setHidden(bool isHidden, bool isAlsoApplyToChildren)
+{
+    this->isHidden = false;
+}
 
 int CFile::getSize() const {
     return size;
@@ -23,36 +24,47 @@ void CFile::print(bool isPrintHiddenItems) const {
     cout << "\t- File: " << name << " (" << size << " KB)" << endl;
 }
 
-bool CFile::isFolder() const {
-    return false;
+CItem *CFile::removeByName(const string &name) {
+    return NULL;
+}
+
+CItem *CFile::findByName(const string &name) {
+    return (this->name == name ? this : NULL);
 }
 
 CFolder::CFolder(const string& name)
     : CItem(name) {}
 
 CFolder::~CFolder() {
-    for (CItem* item : items) {
+    for (CItem* item : items)
         delete item;
-    }
     items.clear();
+}
+
+void CFolder::setHidden(bool isHidden, bool isAlsoApplyToChildren)
+{
+    this->isHidden = isHidden;
+
+    if (isAlsoApplyToChildren)
+        for (CItem* item : items)
+            item->setHidden(isHidden, isAlsoApplyToChildren);
 }
 
 int CFolder::getSize() const {
     int totalSize = 0;
-    for (CItem* item : items) {
+    for (CItem* item : items)
         totalSize += item->getSize();
-    }
     return totalSize;
 }
 
-void CFolder::add(CItem* item) {
-    items.push_back(item);
-}
-
 void CFolder::print(bool isPrintHiddenItems) const {
-    if (isHidden && !isPrintHiddenItems) return;
+    if (isHidden && !isPrintHiddenItems) {
+        cout << "Folder " << name << " is hidden\n";
+        return;
+    }
 
     cout << "+ Folder: " << name << " (" << getSize() << " KB)" << endl;
+    
     for (CItem* item : items) {
         cout << '\t';
         item->print(isPrintHiddenItems);
@@ -60,25 +72,32 @@ void CFolder::print(bool isPrintHiddenItems) const {
 }
 
 CItem* CFolder::removeByName(const string& name) {
-    for (auto it = items.begin(); it != items.end(); ++it) {
-        if ((*it)->getName() == name) {
-            CItem* removedItem = *it;
-            items.erase(it);
+    int len = items.size();
+    for (int i = 0; i < len; ++i) {
+        if (items[i]->getName() == name) {
+            CItem* removedItem = items[i];
+            items.erase(items.begin() + i);
             return removedItem;
         }
+        else {
+            CItem* found = items[i]->removeByName(name);
+            if (found)
+                return found;
+        }
     }
-    return nullptr;
+    return NULL;
 }
 
 CItem* CFolder::findByName(const string& name) {
+    if (this->name == name) return this;
+ 
     for (CItem* item : items) {
-        if (item->getName() == name) {
-            return item;
-        }
+        CItem* found = item->findByName(name);
+        if (found != NULL) return found;
     }
-    return nullptr;
+    return NULL;
 }
 
-bool CFolder::isFolder() const {
-    return true;
+void CFolder::add(CItem* item) {
+    items.push_back(item);
 }
