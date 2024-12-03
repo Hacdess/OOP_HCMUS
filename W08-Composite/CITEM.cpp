@@ -12,7 +12,7 @@ CFile::CFile(const string& name, const int& size)
 
 void CFile::setHidden(bool isHidden, bool isAlsoApplyToChildren)
 {
-    this->isHidden = false;
+    this->isHidden = isHidden;
 }
 
 int CFile::getSize() const {
@@ -20,8 +20,10 @@ int CFile::getSize() const {
 }
 
 void CFile::print(bool isPrintHiddenItems) const {
-    if (isHidden && !isPrintHiddenItems) return;
-    cout << "\t- File: " << name << " (" << size << " KB)" << endl;
+    if (isHidden && !isPrintHiddenItems)
+        cout << "\t - Hiden file\n";
+    else
+        cout << "\t- File: " << name << " (" << size << " KB)" << endl;
 }
 
 CItem *CFile::removeByName(const string &name) {
@@ -58,12 +60,10 @@ int CFolder::getSize() const {
 }
 
 void CFolder::print(bool isPrintHiddenItems) const {
-    if (isHidden && !isPrintHiddenItems) {
-        cout << "Folder " << name << " is hidden\n";
-        return;
-    }
-
-    cout << "+ Folder: " << name << " (" << getSize() << " KB)" << endl;
+    if (isHidden && !isPrintHiddenItems)
+        cout << "+ Hidden Folder\n";
+    else
+        cout << "+ Folder: " << name << " (" << getSize() << " KB)" << endl;
     
     for (CItem* item : items) {
         cout << '\t';
