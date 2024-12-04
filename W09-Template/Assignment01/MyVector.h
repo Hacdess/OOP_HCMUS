@@ -1,11 +1,11 @@
 #ifndef _MyVector_H_
 #define _MyVector_H_
 
-#include <iostream>
-using namespace std;
+#include "Fraction.h"
 
 template<class T> 
-class MyVector{ 
+class MyVector
+{ 
 private: 
     T *arr; 
     int size; 
@@ -21,7 +21,7 @@ public:
 
     ~MyVector(); 
 
-    int getSize(); 
+    int getSize() const; 
     T getItem(int index); 
     void setItem(T value, int index); 
 
@@ -42,5 +42,8 @@ public:
     void sortAsc(); 
     void sortDesc(); 
 }; 
+
+template class MyVector<int>;
+template class MyVector<Fraction>;
 
 #endif
