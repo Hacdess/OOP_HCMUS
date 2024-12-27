@@ -1,3 +1,0 @@
-﻿  LearnGDIPlus.cpp
-D:\OOP_HCMUS\GDIplus\LearnGDIPlus\LearnGDIPlus.cpp(78,15): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
-  LearnGDIPlus.vcxproj -> D:\OOP_HCMUS\GDIplus\LearnGDIPlus\x64\Debug\LearnGDIPlus.exe
